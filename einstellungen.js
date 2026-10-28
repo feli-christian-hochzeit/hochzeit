@@ -4,7 +4,7 @@
 window.EINSTELLUNGEN = {
 
   // Web-App-Adresse aus Google (beginnt mit https://script.google.com/ und endet auf /exec)
-  scriptUrl: '',
+  scriptUrl: 'https://script.google.com/macros/s/AKfycby0U4n72r5GfZ-CzAlpB5vRMVclEqgDJ0ZXz9ZJgEMBuE_eDGsXxBYX3l_08L0AeJ1L/exec',
 
   // Texte oben auf der Seite
   paar: 'Feli & Christian',
