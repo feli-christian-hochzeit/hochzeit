@@ -8,54 +8,61 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Ms+Madi&display=swap">
 <style>
-/* Layout: eine schmale Spalte wie gedrucktes Briefpapier. Kopf links gesetzt mit Ähre (Juli = Erntezeit am Gutshof), darunter das Formular in ruhigen Abschnitten. */
+/* Stil der Einladungskarte „Museum" (Cotton Bird): puderrosa Papier, feine Linien in Sand und Karamell,
+   gerahmter Kopf mit eingekerbten Ecken, Namen in gesperrten Versalien, „und" in Schreibschrift,
+   Datum auf einem weißen Anhänger mit Band. Darunter das Formular auf einem weißen Einleger. */
 :root {
-  --paper: #f4f5ef;
-  --sheet: #fbfcf8;
-  --ink: #1c3327;
-  --muted: #56665b;
-  --wheat: #8a6a1f;
-  --wheat-soft: #c9a75a;
-  --line: #d6dbcd;
-  --tint: #e9ede0;
-  --danger: #9e3219;
-  --on-ink: #f6f7f1;
-  --f-display: "Bodoni Moda", "Bodoni 72", "Didot", Georgia, serif;
-  --f-body: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
-  --step-0: 1.0625rem;
-  --step-1: 1.25rem;
-  --step-2: 1.6rem;
-  --step-4: clamp(2.6rem, 11vw, 3.6rem);
-  --radius: 10px;
+  --paper: #f5e7e2;
+  --sheet: #fffbfa;
+  --ink: #5a3f30;
+  --gold: #83603f;
+  --sand: #c2a68b;
+  --line: #ead9d1;
+  --field: #a58979;
+  --muted: #7d6556;
+  --tint: #f9eeea;
+  --ribbon: #e8e3d3;
+  --danger: #a1381f;
+  --on-gold: #fffbfa;
+  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%23c2a68b'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
+  --f-serif: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --f-script: "Ms Madi", "Snell Roundhand", "Apple Chancery", cursive;
+  --radius: 3px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0e1612;
-    --sheet: #141e19;
-    --ink: #e5eadf;
-    --muted: #9dab9f;
-    --wheat: #d8b66c;
-    --wheat-soft: #b8974f;
-    --line: #2a382f;
-    --tint: #1b2721;
-    --danger: #ec8f75;
-    --on-ink: #0e1612;
+    --paper: #211816;
+    --sheet: #2a201d;
+    --ink: #f2e4de;
+    --gold: #dcba98;
+    --sand: #9c836c;
+    --line: #43342e;
+    --field: #8f7768;
+    --muted: #c4ada2;
+    --tint: #352824;
+    --ribbon: #5b5545;
+    --danger: #f19a82;
+    --on-gold: #211816;
+    --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%239c836c'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0e1612;
-  --sheet: #141e19;
-  --ink: #e5eadf;
-  --muted: #9dab9f;
-  --wheat: #d8b66c;
-  --wheat-soft: #b8974f;
-  --line: #2a382f;
-  --tint: #1b2721;
-  --danger: #ec8f75;
-  --on-ink: #0e1612;
+  --paper: #211816;
+  --sheet: #2a201d;
+  --ink: #f2e4de;
+  --gold: #dcba98;
+  --sand: #9c836c;
+  --line: #43342e;
+  --field: #8f7768;
+  --muted: #c4ada2;
+  --tint: #352824;
+  --ribbon: #5b5545;
+  --danger: #f19a82;
+  --on-gold: #211816;
+  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%239c836c'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
 
@@ -65,119 +72,155 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--f-body);
-  font-size: var(--step-0);
-  line-height: 1.55;
+  font-family: var(--f-serif);
+  font-weight: 500;
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
 }
 .wrap {
   max-width: 34rem;
   margin: 0 auto;
-  padding-block: 2.5rem 4rem;
-  padding-left: max(20px, env(safe-area-inset-left, 0px));
-  padding-right: max(20px, env(safe-area-inset-right, 0px));
+  padding-block: 1.5rem 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-/* Kopf */
+/* Kopf wie die Vorderseite der Karte */
 .kopf {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  column-gap: 1rem;
-  align-items: start;
+  justify-items: center;
+  gap: .85rem;
+  text-align: center;
+  border: 20px solid transparent;
+  border-image: var(--rahmen) 20 / 20px stretch;
+  padding: 1.1rem .5rem 1.25rem;
 }
-.eyebrow {
-  margin: 0 0 .35rem;
-  font-size: .78rem;
-  font-weight: 500;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--wheat);
-}
+.krone { width: min(100%, 15rem); height: auto; color: var(--sand); display: block; }
+.zweig { width: 7rem; height: auto; color: var(--sand); display: block; }
 .paar {
-  margin: 0;
-  font-family: var(--f-display);
-  font-style: italic;
+  margin: .4rem 0 0;
+  display: grid;
+  justify-items: center;
+  color: var(--gold);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 9vw, 2.9rem);
+  line-height: 1.05;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.paar .name { padding-left: .14em; overflow-wrap: anywhere; }
+.paar .und {
+  font-family: var(--f-script);
   font-weight: 400;
-  font-size: var(--step-4);
-  line-height: 1.02;
-  letter-spacing: -.01em;
+  font-size: 1.5em;
+  line-height: .8;
+  letter-spacing: 0;
+  margin-block: -.05em .02em;
+  text-transform: none;
+}
+.einladung {
+  margin: 0;
+  max-width: 17rem;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--muted);
   text-wrap: balance;
 }
-.paar .amp { color: var(--wheat); font-weight: 400; padding-inline: .06em; }
-.aehre { width: 44px; height: auto; color: var(--wheat-soft); grid-row: 1 / span 2; grid-column: 2; margin-top: .2rem; }
-.eckdaten {
-  grid-column: 1 / -1;
-  margin: 1.4rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: .35rem 1.1rem;
-}
-.eckdaten dt {
-  font-size: .72rem;
-  letter-spacing: .18em;
+.anhaenger {
+  position: relative;
+  margin: .2rem 1.6rem 0;
+  padding: .55rem 1.1rem .5rem 1.3rem;
+  background: var(--sheet);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: .95rem;
+  line-height: 1.35;
+  letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--muted);
-  padding-top: .22rem;
+  box-shadow: 0 1px 2px rgb(90 63 48 / .14);
+  text-wrap: balance;
 }
-.eckdaten dd { margin: 0; font-weight: 500; }
-.intro { margin: 0; color: var(--ink); max-width: 60ch; }
-.intro strong { font-weight: 600; white-space: nowrap; }
+.anhaenger::before, .anhaenger::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.4rem;
+  height: .65rem;
+  background: var(--ribbon);
+  transform: translateY(-50%);
+}
+.anhaenger::before { left: -1.1rem; border-radius: 2px 0 0 2px; }
+.anhaenger::after { right: -1.1rem; border-radius: 0 2px 2px 0; }
+.ort { margin: 0; font-style: italic; font-size: 1.15rem; line-height: 1.35; color: var(--muted); text-wrap: balance; }
 
-/* Hinweise */
+/* Einleger mit Formular */
+.einleger {
+  display: grid;
+  gap: 1.75rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 1.6rem 1.25rem 1.75rem;
+}
+.intro { margin: 0; text-align: center; font-size: 1.2rem; line-height: 1.5; text-wrap: pretty; }
+.intro strong { font-weight: 600; color: var(--gold); white-space: nowrap; }
+
 .hinweis {
   margin: 0;
-  padding: .75rem .95rem;
+  padding: .7rem .9rem;
   border-radius: var(--radius);
   background: var(--tint);
-  font-size: .92rem;
-  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.45;
 }
 .hinweis b { font-weight: 600; }
 
-/* Formular */
 form { display: grid; gap: 1.75rem; }
 .feld { display: grid; gap: .5rem; border: 0; margin: 0; padding: 0; min-width: 0; }
 .feld > label, .feld > legend {
-  font-weight: 500;
-  font-size: var(--step-0);
   padding: 0;
   margin-bottom: .1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--gold);
 }
-.opt { font-weight: 400; color: var(--muted); font-size: .85rem; margin-left: .3rem; }
-.hilfe { margin: 0; color: var(--muted); font-size: .9rem; }
+.opt { font-weight: 500; font-style: italic; color: var(--muted); font-size: 1rem; margin-left: .3rem; }
+.hilfe { margin: 0; font-style: italic; color: var(--muted); font-size: 1.05rem; line-height: 1.4; }
 input[type="text"], input[type="tel"], input:not([type]), textarea {
   width: 100%;
   font: inherit;
   color: var(--ink);
   background: var(--sheet);
-  border: 1px solid var(--line);
+  border: 1px solid var(--field);
   border-radius: var(--radius);
-  padding: .78rem .9rem;
+  padding: .65rem .85rem;
   transition: border-color .15s ease, box-shadow .15s ease;
 }
-textarea { resize: vertical; min-height: 3.2rem; }
-input::placeholder, textarea::placeholder { color: var(--muted); opacity: .75; }
+textarea { resize: vertical; min-height: 3.4rem; line-height: 1.45; }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: .8; font-style: italic; }
 input:focus-visible, textarea:focus-visible {
   outline: none;
-  border-color: var(--ink);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--wheat-soft) 45%, transparent);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sand) 50%, transparent);
 }
 [aria-invalid="true"] { border-color: var(--danger) !important; }
-.fehler { margin: 0; color: var(--danger); font-size: .9rem; font-weight: 500; }
+.fehler { margin: 0; color: var(--danger); font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
 
 /* Auswahlkarten */
 .wahl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
 .karte {
   position: relative;
   display: grid;
-  gap: .1rem;
+  gap: .05rem;
   align-content: start;
-  padding: .95rem 1rem;
-  border: 1px solid var(--line);
+  padding: .8rem 1rem;
+  border: 1px solid var(--field);
   border-radius: var(--radius);
   background: var(--sheet);
   cursor: pointer;
@@ -185,45 +228,44 @@ input:focus-visible, textarea:focus-visible {
   min-width: 0;
 }
 .karte input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
-.k-titel { font-weight: 500; line-height: 1.3; }
-.k-sub { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.karte:has(input:checked) { border-color: var(--ink); background: var(--tint); box-shadow: inset 0 0 0 1px var(--ink); }
-.karte:has(input:focus-visible) { outline: 3px solid color-mix(in srgb, var(--wheat-soft) 60%, transparent); outline-offset: 2px; }
-.karte:hover { border-color: var(--muted); }
+.k-titel { font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
+.k-sub { font-style: italic; color: var(--muted); font-size: 1rem; }
+.karte:has(input:checked) { border-color: var(--gold); background: var(--tint); box-shadow: inset 0 0 0 1px var(--gold); }
+.karte:has(input:focus-visible) { outline: 3px solid color-mix(in srgb, var(--sand) 70%, transparent); outline-offset: 2px; }
+.karte:hover { border-color: var(--gold); }
 .wahl.fehlt .karte { border-color: var(--danger); }
 
 /* Zähler */
-.zaehlerliste { display: grid; border: 1px solid var(--line); border-radius: var(--radius); background: var(--sheet); }
+.zaehlerliste { display: grid; border: 1px solid var(--field); border-radius: var(--radius); background: var(--sheet); }
 .zaehler {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: .7rem .6rem .7rem 1rem;
+  padding: .6rem .6rem .6rem 1rem;
 }
-.zaehler + .zaehler { border-top: 1px solid var(--line); }
-.z-lbl { display: grid; min-width: 0; }
-.z-lbl small { color: var(--muted); font-size: .84rem; }
+.z-lbl { display: grid; min-width: 0; font-weight: 600; }
 .z-ctrl { display: flex; align-items: center; gap: .25rem; flex-shrink: 0; }
 .z-ctrl button {
   width: 2.6rem; height: 2.6rem;
   border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink);
-  font: 500 1.35rem/1 var(--f-body);
+  border: 1px solid var(--field);
+  background: transparent;
+  color: var(--gold);
+  font: 600 1.4rem/1 var(--f-serif);
   cursor: pointer;
   display: grid; place-items: center;
 }
-.z-ctrl button:hover:not(:disabled) { border-color: var(--ink); }
-.z-ctrl button:focus-visible { outline: 3px solid color-mix(in srgb, var(--wheat-soft) 60%, transparent); outline-offset: 1px; }
+.z-ctrl button:hover:not(:disabled) { border-color: var(--gold); }
+.z-ctrl button:focus-visible { outline: 3px solid color-mix(in srgb, var(--sand) 70%, transparent); outline-offset: 1px; }
 .z-ctrl button:disabled { opacity: .35; cursor: default; }
 .z-ctrl output {
   min-width: 2.2rem;
   text-align: center;
-  font-family: var(--f-display);
-  font-size: var(--step-2);
-  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-variant-numeric: lining-nums tabular-nums;
   line-height: 1;
 }
 .unterteil { display: grid; gap: 1.75rem; }
@@ -231,179 +273,179 @@ input:focus-visible, textarea:focus-visible {
 /* Absenden */
 .senden {
   justify-self: stretch;
-  font: 500 1.05rem/1 var(--f-body);
+  font: 600 1.25rem/1 var(--f-serif);
   letter-spacing: .04em;
-  padding: 1.05rem 1.4rem;
+  padding: 1rem 1.4rem;
   border: 0;
-  border-radius: 999px;
-  background: var(--ink);
-  color: var(--on-ink);
+  border-radius: var(--radius);
+  background: var(--gold);
+  color: var(--on-gold);
   cursor: pointer;
-  transition: transform .12s ease, opacity .15s ease;
+  transition: opacity .15s ease;
 }
 .senden:hover { opacity: .92; }
-.senden:active { transform: translateY(1px); }
-.senden:focus-visible { outline: 3px solid var(--wheat-soft); outline-offset: 3px; }
+.senden:focus-visible { outline: 3px solid var(--sand); outline-offset: 3px; }
 .senden:disabled { opacity: .6; cursor: progress; }
 
 .falle { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Danke */
-.danke { display: grid; gap: 1rem; }
+.danke { display: grid; gap: 1rem; justify-items: center; text-align: center; }
 .danke h2 {
   margin: 0;
-  font-family: var(--f-display);
   font-style: italic;
-  font-weight: 400;
-  font-size: var(--step-2);
+  font-weight: 500;
+  font-size: 1.85rem;
   line-height: 1.15;
+  color: var(--gold);
   text-wrap: balance;
 }
 .danke h2:focus { outline: none; }
-.danke p { margin: 0; }
+.danke p { margin: 0; text-wrap: pretty; }
 .zusammenfassung {
-  margin: 0;
+  justify-self: stretch;
+  margin: .25rem 0;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: .45rem 1.1rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--sheet);
+  gap: .35rem 1.1rem;
+  padding: .85rem 0;
+  border-block: 1px solid var(--line);
+  text-align: left;
 }
-.zusammenfassung dt { color: var(--muted); font-size: .9rem; }
-.zusammenfassung dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
-.linkknopf {
-  justify-self: start;
-  font: 500 .98rem var(--f-body);
-  color: var(--ink);
-  background: none;
-  border: 0;
-  padding: .2rem 0;
-  border-bottom: 1px solid var(--wheat-soft);
-  cursor: pointer;
-}
-.linkknopf:focus-visible { outline: 3px solid color-mix(in srgb, var(--wheat-soft) 60%, transparent); outline-offset: 3px; }
+.zusammenfassung dt { font-style: italic; color: var(--muted); }
+.zusammenfassung dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
 
-footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+footer { text-align: center; font-style: italic; color: var(--muted); font-size: 1.05rem; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-@media (max-width: 360px) { .wahl { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 360px) {
+  .wahl { grid-template-columns: minmax(0, 1fr); }
+  .einleger { padding-inline: 1rem; }
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><path id="blatt" d="M0 0C3.6-4.2 10-4.8 15 0C10 4.8 3.6 4.2 0 0Z"/></defs>
+</svg>
 <main class="wrap">
 
   <header class="kopf">
-    <div>
-      <p class="eyebrow">Wir heiraten</p>
-      <h1 class="paar" id="paar">Feli <span class="amp">&amp;</span> Christian</h1>
-    </div>
-    <svg class="aehre" viewBox="0 0 44 120" aria-hidden="true" focusable="false">
-      <path d="M22 119 C22 96 22.4 66 23 22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
-      <g fill="currentColor">
-        <ellipse cx="23.3" cy="15" rx="3.4" ry="7.6"/>
-        <ellipse cx="17.6" cy="27" rx="3.6" ry="7.8" transform="rotate(-28 17.6 27)"/>
-        <ellipse cx="28.6" cy="31" rx="3.6" ry="7.8" transform="rotate(28 28.6 31)"/>
-        <ellipse cx="17.4" cy="40" rx="3.7" ry="8" transform="rotate(-28 17.4 40)"/>
-        <ellipse cx="28.4" cy="44" rx="3.7" ry="8" transform="rotate(28 28.4 44)"/>
-        <ellipse cx="17.3" cy="53" rx="3.7" ry="8" transform="rotate(-28 17.3 53)"/>
-        <ellipse cx="28.2" cy="57" rx="3.7" ry="8" transform="rotate(28 28.2 57)"/>
-        <ellipse cx="17.4" cy="66" rx="3.4" ry="7.4" transform="rotate(-28 17.4 66)"/>
-        <ellipse cx="27.9" cy="70" rx="3.4" ry="7.4" transform="rotate(28 27.9 70)"/>
+    <svg class="krone" viewBox="0 18 200 44" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M100 27Q108.3 23.7 109.5 32.5Q116.5 38 109.5 43.5Q108.3 52.3 100 49Q91.8 52.3 90.5 43.5Q83.5 38 90.5 32.5Q91.8 23.7 100 27Z"/>
+      <path d="M100 38m0 -1.5a2.2 2.2 0 1 1 -2.4 2.6a4.4 4.4 0 1 1 5.6 4.2a6.8 6.8 0 0 1 -9.6 -6.2a7.6 7.6 0 0 1 7 -7.8"/>
+      <g id="zweigHaelfte">
+        <path d="M87 41C68 47 42 49 14 41"/>
+        <use href="#blatt" transform="translate(78.6 43.3) rotate(131.1) scale(0.9)"/>
+        <use href="#blatt" transform="translate(68.1 45.2) rotate(208.3) scale(0.88)"/>
+        <use href="#blatt" transform="translate(56.8 46.2) rotate(141.5) scale(0.82)"/>
+        <use href="#blatt" transform="translate(44.8 46.1) rotate(-141.2) scale(0.76)"/>
+        <use href="#blatt" transform="translate(32.1 44.9) rotate(-207.8) scale(0.66)"/>
+        <use href="#blatt" transform="translate(20.7 42.7) rotate(-130.9) scale(0.55)"/>
+        <use href="#blatt" transform="translate(95 51) rotate(118) scale(0.75)"/>
+        <path d="M14 41c-3.4 -.6 -5.6 -3.2 -5 -6.4c3 .4 5.2 3 5 6.4Z"/>
+        <circle cx="9.5" cy="44.5" r=".9"/>
+        <circle cx="12.5" cy="46.8" r=".9"/>
       </g>
-      <g fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" opacity=".8">
-        <path d="M23.4 7 L24 0"/>
-        <path d="M14.4 20 L9 6"/>
-        <path d="M31.8 24 L37.6 10"/>
-        <path d="M14.2 33 L7.6 18"/>
-        <path d="M31.6 37 L38.6 22"/>
-      </g>
+      <use href="#zweigHaelfte" transform="translate(200 0) scale(-1 1)"/>
     </svg>
-    <dl class="eckdaten">
-      <dt>Wann</dt><dd id="datum">Samstag, 24. Juli 2027</dd>
-      <dt>Wo</dt><dd id="ort">Gutshof Edenholzhausen bei Dachau</dd>
-    </dl>
+
+    <h1 class="paar" id="paar" aria-label="Feli und Christian"><span class="name">Feli</span><span class="und">und</span><span class="name">Christian</span></h1>
+    <p class="einladung">laden euch herzlich zu ihrer Hochzeit ein am</p>
+    <p class="anhaenger" id="datum">Samstag, 24. Juli 2027</p>
+    <p class="ort" id="ort">Gutshof Edenholzhausen bei Dachau</p>
+
+    <svg class="zweig" viewBox="0 0 120 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <circle cx="60" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+      <g id="trennerHaelfte">
+        <path d="M56 12C46 14.6 33 9.4 14 12"/>
+        <use href="#blatt" transform="translate(49.6 12.7) rotate(145.5) scale(0.7)"/>
+        <use href="#blatt" transform="translate(41.6 12.3) rotate(-140.7) scale(0.65)"/>
+        <use href="#blatt" transform="translate(32.3 11.5) rotate(-210.2) scale(0.6)"/>
+        <use href="#blatt" transform="translate(22.2 11.3) rotate(212) scale(0.5)"/>
+      </g>
+      <use href="#trennerHaelfte" transform="translate(120 0) scale(-1 1)"/>
+    </svg>
   </header>
 
-  <p class="intro" id="intro">Wir freuen uns sehr, wenn ihr diesen Tag mit uns feiert. Bitte gebt uns bis zum <strong id="frist">15. Mai 2027</strong> Bescheid, ob ihr dabei seid.</p>
+  <div class="einleger">
+    <p class="intro" id="intro">Wir freuen uns sehr, wenn ihr diesen Tag mit uns feiert. Bitte gebt uns bis zum <strong id="frist">15. Mai 2027</strong> Bescheid, ob ihr dabei seid.</p>
 
-  <p class="hinweis" id="vorschau" hidden><b>Vorschau:</b> Antworten werden noch nicht gespeichert. Sobald die Adresse der Tabelle eingetragen ist, landen sie direkt bei euch.</p>
-  <p class="hinweis" id="schonGeantwortet" hidden></p>
+    <p class="hinweis" id="vorschau" hidden><b>Vorschau:</b> Antworten werden noch nicht gespeichert. Sobald die Adresse der Tabelle eingetragen ist, landen sie direkt bei euch.</p>
 
-  <form id="rsvp" novalidate>
-    <div class="feld">
-      <label for="name">Wer antwortet?</label>
-      <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="z. B. Anna und Max Huber" aria-describedby="name-hilfe err-name">
-      <p class="hilfe" id="name-hilfe">Wenn ihr zu zweit kommt, reicht eine gemeinsame Antwort.</p>
-      <p class="fehler" id="err-name" hidden></p>
-    </div>
-
-    <fieldset class="feld">
-      <legend>Seid ihr dabei?</legend>
-      <div class="wahl" id="wahl-antwort">
-        <label class="karte"><input type="radio" name="antwort" id="antwort-zusage" value="zusage"><span class="k-titel">Wir kommen gern</span><span class="k-sub">Zusage</span></label>
-        <label class="karte"><input type="radio" name="antwort" id="antwort-absage" value="absage"><span class="k-titel">Leider nicht</span><span class="k-sub">Absage</span></label>
-      </div>
-      <p class="fehler" id="err-antwort" hidden></p>
-    </fieldset>
-
-    <div class="unterteil" id="zusageTeil" hidden>
-      <fieldset class="feld">
-        <legend>Wie viele kommen?</legend>
-        <div class="zaehlerliste">
-          <div class="zaehler" data-key="personen">
-            <span class="z-lbl" id="lbl-personen">Personen</span>
-            <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Eine Person weniger">&minus;</button><output id="personen" aria-labelledby="lbl-personen">1</output><button type="button" data-d="1" aria-label="Eine Person mehr">+</button></span>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="feld" id="busFeld">
-        <legend>Fahrt ihr mit dem Bus?</legend>
-        <p class="hilfe" id="busInfo">Hinfahrt mittags ab Pfaffenhofen, Rückfahrt um Mitternacht.</p>
-        <div class="wahl" id="wahl-bus">
-          <label class="karte"><input type="radio" name="bus" id="bus-ja" value="ja"><span class="k-titel">Ja, gern</span></label>
-          <label class="karte"><input type="radio" name="bus" id="bus-nein" value="nein"><span class="k-titel">Nein, wir kommen selbst</span></label>
-        </div>
-        <div class="zaehlerliste" id="busPlaetzeZeile" hidden>
-          <div class="zaehler" data-key="busPlaetze">
-            <span class="z-lbl" id="lbl-busPlaetze">Plätze im Bus</span>
-            <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Busplätze: einer weniger">&minus;</button><output id="busPlaetze" aria-labelledby="lbl-busPlaetze">1</output><button type="button" data-d="1" aria-label="Busplätze: einer mehr">+</button></span>
-          </div>
-        </div>
-        <p class="fehler" id="err-bus" hidden></p>
-      </fieldset>
-
+    <form id="rsvp" novalidate>
       <div class="feld">
-        <label for="kontakt">Handynummer</label>
-        <input id="kontakt" type="tel" inputmode="tel" maxlength="25" autocomplete="tel" placeholder="z. B. 0170 1234567" aria-describedby="kontakt-hilfe err-kontakt">
-        <p class="hilfe" id="kontakt-hilfe">Damit wir euch bei Fragen zum Ablauf oder zum Bus erreichen.</p>
-        <p class="fehler" id="err-kontakt" hidden></p>
+        <label for="name">Wer antwortet?</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="z. B. Anna und Max Huber" aria-describedby="name-hilfe err-name">
+        <p class="hilfe" id="name-hilfe">Wenn ihr zu zweit kommt, reicht eine gemeinsame Antwort.</p>
+        <p class="fehler" id="err-name" hidden></p>
       </div>
-    </div>
 
-    <div class="feld" id="nachrichtFeld" hidden>
-      <label for="nachricht">Ein paar Worte an uns <span class="opt">optional</span></label>
-      <textarea id="nachricht" rows="3" maxlength="1000"></textarea>
-    </div>
+      <fieldset class="feld">
+        <legend>Seid ihr dabei?</legend>
+        <div class="wahl" id="wahl-antwort">
+          <label class="karte"><input type="radio" name="antwort" id="antwort-zusage" value="zusage"><span class="k-titel">Wir kommen gern</span><span class="k-sub">Zusage</span></label>
+          <label class="karte"><input type="radio" name="antwort" id="antwort-absage" value="absage"><span class="k-titel">Leider nicht</span><span class="k-sub">Absage</span></label>
+        </div>
+        <p class="fehler" id="err-antwort" hidden></p>
+      </fieldset>
 
-    <div class="falle" aria-hidden="true">
-      <label for="website">Bitte leer lassen</label>
-      <input id="website" type="text" tabindex="-1" autocomplete="off">
-    </div>
+      <div class="unterteil" id="zusageTeil" hidden>
+        <fieldset class="feld">
+          <legend>Wie viele kommen?</legend>
+          <div class="zaehlerliste">
+            <div class="zaehler" data-key="personen">
+              <span class="z-lbl" id="lbl-personen">Personen</span>
+              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Eine Person weniger">&minus;</button><output id="personen" aria-labelledby="lbl-personen">1</output><button type="button" data-d="1" aria-label="Eine Person mehr">+</button></span>
+            </div>
+          </div>
+        </fieldset>
 
-    <button type="submit" class="senden" id="senden">Antwort senden</button>
-    <p class="fehler" id="err-senden" role="alert" hidden></p>
-  </form>
+        <fieldset class="feld" id="busFeld">
+          <legend>Fahrt ihr mit dem Bus?</legend>
+          <p class="hilfe" id="busInfo">Hinfahrt mittags ab Pfaffenhofen, Rückfahrt um Mitternacht.</p>
+          <div class="wahl" id="wahl-bus">
+            <label class="karte"><input type="radio" name="bus" id="bus-ja" value="ja"><span class="k-titel">Ja, gern</span></label>
+            <label class="karte"><input type="radio" name="bus" id="bus-nein" value="nein"><span class="k-titel">Nein, wir kommen selbst</span></label>
+          </div>
+          <div class="zaehlerliste" id="busPlaetzeZeile" hidden>
+            <div class="zaehler" data-key="busPlaetze">
+              <span class="z-lbl" id="lbl-busPlaetze">Plätze im Bus</span>
+              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Busplätze: einer weniger">&minus;</button><output id="busPlaetze" aria-labelledby="lbl-busPlaetze">1</output><button type="button" data-d="1" aria-label="Busplätze: einer mehr">+</button></span>
+            </div>
+          </div>
+          <p class="fehler" id="err-bus" hidden></p>
+        </fieldset>
 
-  <section class="danke" id="danke" hidden aria-live="polite">
-    <h2 id="dankeTitel" tabindex="-1"></h2>
-    <p id="dankeText"></p>
-    <dl class="zusammenfassung" id="dankeDaten"></dl>
-    <p class="hilfe">Ihr wollt etwas ändern? Schickt das Formular einfach noch einmal mit demselben Namen ab. Wir übernehmen dann eure neue Antwort.</p>
-    <button type="button" class="linkknopf" id="aendern">Antwort ändern</button>
-  </section>
+        <div class="feld">
+          <label for="kontakt">Handynummer</label>
+          <input id="kontakt" type="tel" inputmode="tel" maxlength="25" autocomplete="tel" placeholder="z. B. 0170 1234567" aria-describedby="kontakt-hilfe err-kontakt">
+          <p class="hilfe" id="kontakt-hilfe">Damit wir euch bei Fragen zum Ablauf oder zum Bus erreichen.</p>
+          <p class="fehler" id="err-kontakt" hidden></p>
+        </div>
+      </div>
+
+      <div class="feld" id="nachrichtFeld" hidden>
+        <label for="nachricht">Ein paar Worte an uns <span class="opt">optional</span></label>
+        <textarea id="nachricht" rows="3" maxlength="1000"></textarea>
+      </div>
+
+      <div class="falle" aria-hidden="true">
+        <label for="website">Bitte leer lassen</label>
+        <input id="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button type="submit" class="senden" id="senden">Antwort senden</button>
+      <p class="fehler" id="err-senden" role="alert" hidden></p>
+    </form>
+
+    <section class="danke" id="danke" hidden aria-live="polite">
+      <h2 id="dankeTitel" tabindex="-1"></h2>
+      <p id="dankeText"></p>
+      <dl class="zusammenfassung" id="dankeDaten"></dl>
+      <p class="hilfe">Hat sich bei euch etwas geändert? Dann sagt uns einfach direkt Bescheid.</p>
+    </section>
+  </div>
 
   <footer id="fusszeile">Fragen? Meldet euch jederzeit bei uns.</footer>
 </main>
@@ -439,16 +481,21 @@ const CONFIG = Object.assign({
   setze('fusszeile', CONFIG.fusszeile);
   if (CONFIG.paar) {
     const h = $('paar');
+    const teile = CONFIG.paar.split('&').map((t) => t.trim()).filter(Boolean);
     h.textContent = '';
-    CONFIG.paar.split('&').forEach((teil, i) => {
+    teile.forEach((teil, i) => {
       if (i > 0) {
-        const amp = document.createElement('span');
-        amp.className = 'amp';
-        amp.textContent = '&';
-        h.append(' ', amp, ' ');
+        const und = document.createElement('span');
+        und.className = 'und';
+        und.textContent = 'und';
+        h.append(und);
       }
-      h.append(teil.trim());
+      const name = document.createElement('span');
+      name.className = 'name';
+      name.textContent = teil;
+      h.append(name);
     });
+    h.setAttribute('aria-label', teile.join(' und '));
     document.title = 'Hochzeit ' + CONFIG.paar;
   }
   if (!CONFIG.bus) $('busFeld').remove();
@@ -579,7 +626,8 @@ const CONFIG = Object.assign({
     }
   }
 
-  function zeigeDanke(d, wann) {
+  // Danke-Ansicht. still = beim Öffnen der Seite (kein Springen, kein Fokus)
+  function zeigeDanke(d, wann, still) {
     const z = d.antwort === 'zusage';
     $('dankeTitel').textContent = z ? 'Wunderbar, wir freuen uns auf euch!' : 'Schade, dass ihr nicht dabei sein könnt.';
     $('dankeText').textContent = z
@@ -605,10 +653,12 @@ const CONFIG = Object.assign({
     if (wann) zeile('Gesendet', wann);
     $('rsvp').hidden = true;
     $('intro').hidden = true;
-    $('schonGeantwortet').hidden = true;
+    $('vorschau').hidden = true;
     $('danke').hidden = false;
-    $('dankeTitel').focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!still) {
+      $('dankeTitel').focus({ preventScroll: true });
+      $('danke').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   const heute = () => new Date().toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -626,7 +676,7 @@ const CONFIG = Object.assign({
       if (echt) {
         try { localStorage.setItem(SPEICHER, JSON.stringify({ d, wann: heute() })); } catch (_) {}
       }
-      zeigeDanke(d, r.vorschau ? 'Vorschau, nicht gespeichert' : heute());
+      zeigeDanke(d, r.vorschau ? 'Vorschau, nicht gespeichert' : heute(), false);
     } catch (err) {
       fehler('senden', 'Das hat leider nicht geklappt. Prüft bitte eure Internetverbindung und versucht es noch einmal. Wenn es weiter hakt, sagt uns einfach direkt Bescheid.');
     } finally {
@@ -635,35 +685,17 @@ const CONFIG = Object.assign({
     }
   });
 
-  $('aendern').addEventListener('click', () => {
-    $('danke').hidden = true;
-    $('rsvp').hidden = false;
-    $('intro').hidden = false;
-    $('name').focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Formular mit Werten füllen (frühere Antwort auf diesem Handy oder Name aus dem QR-Code)
-  function fuelle(d) {
-    if (d.name) $('name').value = d.name;
-    if (d.antwort) { const r = $('antwort-' + d.antwort); if (r) r.checked = true; }
-    if (d.antwort === 'zusage') {
-      if (Number.isFinite(d.personen) && d.personen > 0) werte.personen = d.personen;
-      if (d.bus && $('bus-' + d.bus)) $('bus-' + d.bus).checked = true;
-      if (d.busPlaetze) { werte.busPlaetze = d.busPlaetze; busManuell = true; }
-      $('kontakt').value = d.kontakt || '';
+  // Schon geantwortet? Dann zeigt die Seite die Antwort statt des Formulars.
+  // Zum Testen: Seite mit ?neu am Ende öffnen, dann ist das Formular wieder leer.
+  try {
+    if (new URLSearchParams(location.search).has('neu')) {
+      localStorage.removeItem(SPEICHER);
+      history.replaceState(null, '', location.pathname);
     }
-    $('nachricht').value = d.nachricht || '';
-  }
-
+  } catch (_) {}
   let frueher = null;
   try { frueher = JSON.parse(localStorage.getItem(SPEICHER) || 'null'); } catch (_) {}
-  if (frueher && frueher.d) {
-    fuelle(frueher.d);
-    const s = $('schonGeantwortet');
-    s.textContent = 'Ihr habt am ' + frueher.wann + ' bereits ' + (frueher.d.antwort === 'zusage' ? 'zugesagt' : 'abgesagt') + '. Hier könnt ihr eure Antwort jederzeit ändern.';
-    s.hidden = false;
-  }
+  if (frueher && frueher.d && frueher.d.name) zeigeDanke(frueher.d, frueher.wann, true);
 
   sichtbarkeit();
   zeichne();
