@@ -433,6 +433,12 @@ textarea {
 .siegel .s-ini { font-size: 1.45rem; line-height: 1; letter-spacing: .1em; padding-left: .1em; }
 .siegel .s-und { font-family: var(--f-script); font-size: 2.3rem; line-height: .55; margin: .02rem 0 .1rem; }
 footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
+.kontakte { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 2.6rem; }
+.kontakte li { display: grid; justify-items: center; gap: .1rem; }
+.k-name { font-weight: 600; font-size: .8rem; letter-spacing: .24em; padding-left: .24em; text-transform: uppercase; color: var(--caramel); }
+.kontakte a { font-style: italic; font-size: 1.35rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); font-variant-numeric: oldstyle-nums; white-space: nowrap; }
+.kontakte a:hover { border-color: var(--caramel); }
+.kontakte a:focus-visible { outline: 2px solid var(--caramel); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 @media (max-width: 370px) {
@@ -569,6 +575,10 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
   <footer class="abschluss">
     <div class="siegel" aria-hidden="true"><span class="s-ini" id="siegel1">F</span><span class="s-und">und</span><span class="s-ini" id="siegel2">C</span></div>
     <p id="fusszeile">Fragen? Meldet euch jederzeit bei uns.</p>
+    <ul class="kontakte" id="kontakte">
+      <li><span class="k-name">Felicitas</span><a href="tel:+4917632400290">0176 32400290</a></li>
+      <li><span class="k-name">Christian</span><a href="tel:+4916094668386">0160 94668386</a></li>
+    </ul>
   </footer>
 </main>
 
@@ -584,7 +594,11 @@ const CONFIG = Object.assign({
   frist: '1. Mai 2027',
   bus: true,
   busInfo: 'Hinfahrt direkt nach der Trauung von der Spitalkirche zum Hofgut. Rückfahrt um 0:30 Uhr vom Hofgut zurück zum Hauptplatz Pfaffenhofen.',
-  fusszeile: 'Fragen? Meldet euch jederzeit bei uns.'
+  fusszeile: 'Fragen? Meldet euch jederzeit bei uns.',
+  kontakt1Name: 'Felicitas',
+  kontakt1Nummer: '0176 32400290',
+  kontakt2Name: 'Christian',
+  kontakt2Nummer: '0160 94668386'
 }, window.EINSTELLUNGEN || {});
 
 (function () {
@@ -625,6 +639,35 @@ const CONFIG = Object.assign({
       $('siegel2').textContent = teile[1].charAt(0).toUpperCase();
     }
   }
+  // Handynummern ganz unten, antippen ruft an
+  const telLink = (t) => {
+    let d = String(t).replace(/[^\d+]/g, '');
+    if (d.startsWith('00')) d = '+' + d.slice(2);
+    else if (d.startsWith('0')) d = '+49' + d.slice(1);
+    return 'tel:' + d;
+  };
+  const kontakte = [[CONFIG.kontakt1Name, CONFIG.kontakt1Nummer], [CONFIG.kontakt2Name, CONFIG.kontakt2Nummer]]
+    .filter((k) => String(k[1] || '').trim());
+  const liste = $('kontakte');
+  liste.textContent = '';
+  kontakte.forEach(([name, nummer]) => {
+    const li = document.createElement('li');
+    const nr = String(nummer).trim();
+    if (name) {
+      const n = document.createElement('span');
+      n.className = 'k-name';
+      n.textContent = name;
+      li.append(n);
+    }
+    const a = document.createElement('a');
+    a.href = telLink(nr);
+    a.textContent = nr;
+    if (name) a.setAttribute('aria-label', name + ' anrufen: ' + nr);
+    li.append(a);
+    liste.append(li);
+  });
+  liste.hidden = !kontakte.length;
+
   if (!CONFIG.bus) {
     $('busFeld').remove();
     $('busTrenner').remove();

@@ -17,5 +17,11 @@ window.EINSTELLUNGEN = {
   busInfo: 'Hinfahrt direkt nach der Trauung von der Spitalkirche zum Hofgut. Rückfahrt um 0:30 Uhr vom Hofgut zurück zum Hauptplatz Pfaffenhofen.',
 
   // Satz ganz unten auf der Seite
-  fusszeile: 'Fragen? Meldet euch jederzeit bei uns.'
+  fusszeile: 'Fragen? Meldet euch jederzeit bei uns.',
+
+  // Handynummern ganz unten auf der Seite. Nummer leer lassen = nicht anzeigen.
+  kontakt1Name: 'Felicitas',
+  kontakt1Nummer: '0176 32400290',
+  kontakt2Name: 'Christian',
+  kontakt2Nummer: '0160 94668386'
 };
