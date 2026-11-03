@@ -3,451 +3,573 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hochzeit Feli &amp; Christian</title>
+<title>Hochzeit Felicitas &amp; Christian</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ece2dd">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Ms+Madi&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Ms+Madi&display=swap">
 <style>
-/* Stil der Einladungskarte „Museum" (Cotton Bird): puderrosa Papier, feine Linien in Sand und Karamell,
-   gerahmter Kopf mit eingekerbten Ecken, Namen in gesperrten Versalien, „und" in Schreibschrift,
-   Datum auf einem weißen Anhänger mit Band. Darunter das Formular auf einem weißen Einleger. */
+/* Gestaltung im Stil der Kollektion „Museum" (Cotton Bird), mit eigenen Ornamenten:
+   Karten wie im Flatlay auf hellem Grund. Oben die Einladung auf puderrosa Papier mit Doppelrahmen,
+   Satinband und Etikett, darunter die Antwortkarte auf weißem Papier. Titel in gesperrten Versalien,
+   Zierwörter in Schreibschrift, kurze Texte kursiv in Karamell. */
 :root {
-  --paper: #f5e7e2;
-  --sheet: #fffbfa;
-  --ink: #5a3f30;
-  --gold: #83603f;
-  --sand: #c2a68b;
-  --line: #ead9d1;
-  --field: #a58979;
-  --muted: #7d6556;
-  --tint: #f9eeea;
-  --ribbon: #e8e3d3;
-  --danger: #a1381f;
-  --on-gold: #fffbfa;
-  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%23c2a68b'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
+  --tisch: #ece2dd;
+  --blush: #f8ece6;
+  --papier: #fffcfa;
+  --ink: #67483a;
+  --caramel: #8b5f3f;
+  --caramel-hell: #a6744e;
+  --sand: #c7aa8e;
+  --linie: #e6d6cb;
+  --feld: #c4a891;
+  --tint: #fbf3ef;
+  --band-hell: #eceedf;
+  --band: #dcdfcb;
+  --band-dunkel: #c5c9b1;
+  --etikett: #ffffff;
+  --fehler: #a1381f;
+  --auf-caramel: #fffcfa;
+  --schatten: 0 1px 1px rgb(92 62 46 / .05), 0 14px 34px -16px rgb(92 62 46 / .38);
+  --korn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .3 0 0 0 0 .24 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%23c7aa8e'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
   --f-serif: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
   --f-script: "Ms Madi", "Snell Roundhand", "Apple Chancery", cursive;
-  --radius: 3px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #211816;
-    --sheet: #2a201d;
-    --ink: #f2e4de;
-    --gold: #dcba98;
-    --sand: #9c836c;
-    --line: #43342e;
-    --field: #8f7768;
-    --muted: #c4ada2;
-    --tint: #352824;
-    --ribbon: #5b5545;
-    --danger: #f19a82;
-    --on-gold: #211816;
-    --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%239c836c'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
+    --tisch: #17110f;
+    --blush: #2a1f1b;
+    --papier: #221916;
+    --ink: #efe2da;
+    --caramel: #e3c09f;
+    --caramel-hell: #dcb08a;
+    --sand: #8d7262;
+    --linie: #3e302a;
+    --feld: #7c6254;
+    --tint: #2e231f;
+    --band-hell: #727663;
+    --band: #5d614f;
+    --band-dunkel: #4a4d3e;
+    --etikett: #382b26;
+    --fehler: #f0997f;
+    --auf-caramel: #1b1412;
+    --schatten: 0 1px 1px rgb(0 0 0 / .3), 0 16px 36px -14px rgb(0 0 0 / .7);
+    --korn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .92 0 0 0 0 .86 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%238d7262'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #211816;
-  --sheet: #2a201d;
-  --ink: #f2e4de;
-  --gold: #dcba98;
-  --sand: #9c836c;
-  --line: #43342e;
-  --field: #8f7768;
-  --muted: #c4ada2;
-  --tint: #352824;
-  --ribbon: #5b5545;
-  --danger: #f19a82;
-  --on-gold: #211816;
-  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%239c836c'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
+  --tisch: #17110f;
+  --blush: #2a1f1b;
+  --papier: #221916;
+  --ink: #efe2da;
+  --caramel: #e3c09f;
+  --caramel-hell: #dcb08a;
+  --sand: #8d7262;
+  --linie: #3e302a;
+  --feld: #7c6254;
+  --tint: #2e231f;
+  --band-hell: #727663;
+  --band: #5d614f;
+  --band-dunkel: #4a4d3e;
+  --etikett: #382b26;
+  --fehler: #f0997f;
+  --auf-caramel: #1b1412;
+  --schatten: 0 1px 1px rgb(0 0 0 / .3), 0 16px 36px -14px rgb(0 0 0 / .7);
+  --korn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .92 0 0 0 0 .86 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --rahmen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none' stroke='%238d7262'%3E%3Cpath d='M12 2H48A10 10 0 0 0 58 12V48A10 10 0 0 0 48 58H12A10 10 0 0 0 2 48V12A10 10 0 0 0 12 2Z' stroke-width='1'/%3E%3Cpath d='M15.4 6H44.6A14 14 0 0 0 54 15.4V44.6A14 14 0 0 0 44.6 54H15.4A14 14 0 0 0 6 44.6V15.4A14 14 0 0 0 15.4 6Z' stroke-width='.6'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--korn), var(--tisch);
   color: var(--ink);
   font-family: var(--f-serif);
   font-weight: 500;
   font-size: 1.1875rem;
-  line-height: 1.6;
+  line-height: 1.55;
   font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
 }
-.wrap {
-  max-width: 34rem;
+p { margin: 0; }
+.nur-vorleser { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.tisch {
+  --rand: 12px;
+  --rahmen-breite: 22px;
+  --innen: 1.15rem;
+  max-width: 35rem;
   margin: 0 auto;
-  padding-block: 1.5rem 3rem;
+  padding-block: 1.75rem 3rem;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   display: grid;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
+.tisch > * { min-width: 0; }
 
-/* Kopf wie die Vorderseite der Karte */
-.kopf {
-  display: grid;
-  justify-items: center;
-  gap: .85rem;
-  text-align: center;
-  border: 20px solid transparent;
-  border-image: var(--rahmen) 20 / 20px stretch;
-  padding: 1.1rem .5rem 1.25rem;
-}
-.krone { width: min(100%, 15rem); height: auto; color: var(--sand); display: block; }
-.zweig { width: 7rem; height: auto; color: var(--sand); display: block; }
-.paar {
-  margin: .4rem 0 0;
-  display: grid;
-  justify-items: center;
-  color: var(--gold);
-  font-weight: 500;
-  font-size: clamp(1.75rem, 9vw, 2.9rem);
-  line-height: 1.05;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.paar .name { padding-left: .14em; overflow-wrap: anywhere; }
-.paar .und {
-  font-family: var(--f-script);
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: .8;
-  letter-spacing: 0;
-  margin-block: -.05em .02em;
-  text-transform: none;
-}
-.einladung {
-  margin: 0;
-  max-width: 17rem;
-  font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.35;
-  color: var(--muted);
-  text-wrap: balance;
-}
-.anhaenger {
-  position: relative;
-  margin: .2rem 1.6rem 0;
-  padding: .55rem 1.1rem .5rem 1.3rem;
-  background: var(--sheet);
-  color: var(--gold);
-  font-weight: 600;
-  font-size: .95rem;
-  line-height: 1.35;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  box-shadow: 0 1px 2px rgb(90 63 48 / .14);
-  text-wrap: balance;
-}
-.anhaenger::before, .anhaenger::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 1.4rem;
-  height: .65rem;
-  background: var(--ribbon);
-  transform: translateY(-50%);
-}
-.anhaenger::before { left: -1.1rem; border-radius: 2px 0 0 2px; }
-.anhaenger::after { right: -1.1rem; border-radius: 0 2px 2px 0; }
-.ort { margin: 0; font-style: italic; font-size: 1.15rem; line-height: 1.35; color: var(--muted); text-wrap: balance; }
-
-/* Einleger mit Formular */
-.einleger {
-  display: grid;
-  gap: 1.75rem;
-  background: var(--sheet);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  padding: 1.6rem 1.25rem 1.75rem;
-}
-.intro { margin: 0; text-align: center; font-size: 1.2rem; line-height: 1.5; text-wrap: pretty; }
-.intro strong { font-weight: 600; color: var(--gold); white-space: nowrap; }
-
-.hinweis {
-  margin: 0;
-  padding: .7rem .9rem;
-  border-radius: var(--radius);
-  background: var(--tint);
-  font-size: 1.05rem;
-  line-height: 1.45;
-}
-.hinweis b { font-weight: 600; }
-
-form { display: grid; gap: 1.75rem; }
-.feld { display: grid; gap: .5rem; border: 0; margin: 0; padding: 0; min-width: 0; }
-.feld > label, .feld > legend {
-  padding: 0;
-  margin-bottom: .1rem;
-  font-weight: 600;
-  font-size: 1.3rem;
-  line-height: 1.25;
-  color: var(--gold);
-}
-.opt { font-weight: 500; font-style: italic; color: var(--muted); font-size: 1rem; margin-left: .3rem; }
-.hilfe { margin: 0; font-style: italic; color: var(--muted); font-size: 1.05rem; line-height: 1.4; }
-input[type="text"], input[type="tel"], input:not([type]), textarea {
-  width: 100%;
-  font: inherit;
-  color: var(--ink);
-  background: var(--sheet);
-  border: 1px solid var(--field);
-  border-radius: var(--radius);
-  padding: .65rem .85rem;
-  transition: border-color .15s ease, box-shadow .15s ease;
-}
-textarea { resize: vertical; min-height: 3.4rem; line-height: 1.45; }
-input::placeholder, textarea::placeholder { color: var(--muted); opacity: .8; font-style: italic; }
-input:focus-visible, textarea:focus-visible {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sand) 50%, transparent);
-}
-[aria-invalid="true"] { border-color: var(--danger) !important; }
-.fehler { margin: 0; color: var(--danger); font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
-
-/* Auswahlkarten */
-.wahl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+/* Papierkarten */
 .karte {
   position: relative;
+  padding: var(--rand);
+  border-radius: 2px;
+  box-shadow: var(--schatten);
+}
+.karte.vorne { background: var(--korn), var(--blush); }
+.karte.antwort { background: var(--korn), var(--papier); }
+.rahmen {
+  position: relative;
+  border: var(--rahmen-breite) solid transparent;
+  border-image: var(--rahmen) 22 / var(--rahmen-breite) stretch;
+  padding: 1.5rem var(--innen) 1.6rem;
   display: grid;
-  gap: .05rem;
+  justify-items: center;
+  text-align: center;
+}
+.orn { fill: none; stroke: currentColor; stroke-width: .8; stroke-linecap: round; stroke-linejoin: round; display: block; }
+.ecke { position: absolute; width: clamp(2.6rem, 11vw, 3.6rem); height: auto; color: var(--sand); pointer-events: none; }
+.ecke.ol { top: -6px; left: -6px; }
+.ecke.or { top: -6px; right: -6px; transform: scaleX(-1); }
+.ecke.ul { bottom: -6px; left: -6px; transform: scaleY(-1); }
+.ecke.ur { bottom: -6px; right: -6px; transform: scale(-1, -1); }
+
+/* Kopf: Vorderseite der Einladung */
+.bukett { width: min(100%, 15.5rem); height: auto; color: var(--sand); margin-bottom: .9rem; }
+.paar {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  color: var(--caramel-hell);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 8.2vw, 3rem);
+  line-height: 1;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.paar .name { padding-left: .17em; overflow-wrap: anywhere; }
+.paar .und {
+  position: relative;
+  z-index: 1;
+  font-family: var(--f-script);
+  font-weight: 400;
+  font-size: 1.62em;
+  line-height: .75;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-block: -.03em -.1em;
+}
+.einladung {
+  margin-top: 1.2rem;
+  max-width: 16rem;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--caramel);
+  text-wrap: balance;
+}
+
+/* Satinband quer über die Karte, darauf das Etikett mit dem Datum */
+.band {
+  position: relative;
+  justify-self: stretch;
+  display: grid;
+  place-items: center;
+  margin: 1.25rem calc(-1 * (var(--rand) + var(--rahmen-breite) + var(--innen))) 1.2rem;
+}
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 1.7rem;
+  transform: translateY(-50%);
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / .07) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, var(--band-hell) 0%, var(--band) 38%, var(--band) 62%, var(--band-dunkel) 100%);
+  box-shadow: 0 1px 2px rgb(60 50 30 / .18);
+}
+.etikett {
+  position: relative;
+  margin: 0;
+  padding: .68rem 1.25rem .6rem 1.45rem;
+  background: var(--korn), var(--etikett);
+  color: var(--caramel);
+  font-weight: 600;
+  font-size: .86rem;
+  line-height: 1.3;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px rgb(92 62 46 / .12), 0 6px 14px -8px rgb(92 62 46 / .45);
+  text-wrap: balance;
+  max-width: calc(100% - 5rem);
+}
+.ort { font-style: italic; font-size: 1.3rem; line-height: 1.3; color: var(--caramel); text-wrap: balance; }
+.zweig { width: 7.2rem; height: auto; color: var(--sand); margin-top: 1.1rem; }
+
+/* Antwortkarte */
+.antwort-kopf { display: grid; justify-items: center; gap: .3rem; }
+.antwort-kopf .zweig { margin: 0 0 .6rem; }
+.titel {
+  margin: 0;
+  color: var(--caramel-hell);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 6.4vw, 1.85rem);
+  line-height: 1.15;
+  letter-spacing: .2em;
+  padding-left: .2em;
+  text-transform: uppercase;
+}
+.frist { font-style: italic; font-size: 1.3rem; color: var(--caramel); font-variant-numeric: oldstyle-nums; }
+.intro { margin-top: .9rem; max-width: 22rem; font-size: 1.3rem; line-height: 1.5; text-wrap: pretty; }
+
+.hinweis {
+  margin-top: 1.2rem;
+  padding: .7rem .9rem;
+  border: 1px solid var(--linie);
+  background: var(--tint);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  font-style: italic;
+}
+.hinweis b { font-style: normal; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .85em; }
+
+form { justify-self: stretch; display: grid; gap: 2rem; margin-top: 2rem; }
+.feld { display: grid; gap: .55rem; justify-items: center; border: 0; margin: 0; padding: 0; min-width: 0; }
+.feld > *:not(legend) { justify-self: stretch; }
+.feld > .hilfe, .feld > .fehler { justify-self: center; }
+.feld > label, .feld > legend, .frage {
+  padding: 0 0 0 .24em;
+  margin: 0 0 .1rem;
+  color: var(--caramel);
+  font-weight: 600;
+  font-size: .9rem;
+  line-height: 1.3;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.feld > legend { width: 100%; }
+.opt { display: block; margin-top: .15rem; font-weight: 500; font-style: italic; letter-spacing: 0; text-transform: none; font-size: 1rem; color: var(--caramel); }
+.hilfe { font-style: italic; color: var(--caramel); font-size: 1.15rem; line-height: 1.4; text-align: center; text-wrap: pretty; max-width: 24rem; }
+.fehler { color: var(--fehler); font-size: 1.05rem; font-weight: 600; line-height: 1.4; text-align: center; }
+
+/* Felder wie Linien auf einer Antwortkarte */
+input[type="text"], input[type="tel"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  min-height: 3rem;
+  font: inherit;
+  font-size: 1.4rem;
+  color: var(--ink);
+  text-align: center;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--feld);
+  border-radius: 0;
+  padding: .45rem .25rem .35rem;
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+input::placeholder, textarea::placeholder { color: var(--caramel); opacity: .55; font-style: italic; }
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+  border-color: var(--caramel);
+  box-shadow: 0 1px 0 var(--caramel);
+  background-color: color-mix(in srgb, var(--tint) 70%, transparent);
+}
+[aria-invalid="true"] { border-color: var(--fehler) !important; box-shadow: 0 1px 0 var(--fehler) !important; }
+textarea {
+  width: 100%;
+  min-height: calc(3 * 1.9rem);
+  resize: vertical;
+  font: inherit;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.9rem;
+  padding: 0 .3rem;
+  border: 0;
+  border-radius: 0;
+  background: repeating-linear-gradient(180deg, transparent 0 calc(1.9rem - 1px), var(--feld) calc(1.9rem - 1px) 1.9rem) local;
+  transition: background-color .15s ease;
+}
+
+/* Auswahl: gedruckte Kreise wie auf einer Antwortkarte */
+.wahl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.karte-wahl {
+  position: relative;
+  display: grid;
+  justify-items: center;
   align-content: start;
-  padding: .8rem 1rem;
-  border: 1px solid var(--field);
-  border-radius: var(--radius);
-  background: var(--sheet);
+  gap: .2rem;
+  padding: 1rem .7rem .95rem;
+  border: 1px solid var(--linie);
+  border-radius: 2px;
+  background: transparent;
+  text-align: center;
   cursor: pointer;
-  transition: border-color .15s ease, background-color .15s ease;
+  transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
   min-width: 0;
 }
-.karte input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
-.k-titel { font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
-.k-sub { font-style: italic; color: var(--muted); font-size: 1rem; }
-.karte:has(input:checked) { border-color: var(--gold); background: var(--tint); box-shadow: inset 0 0 0 1px var(--gold); }
-.karte:has(input:focus-visible) { outline: 3px solid color-mix(in srgb, var(--sand) 70%, transparent); outline-offset: 2px; }
-.karte:hover { border-color: var(--gold); }
-.wahl.fehlt .karte { border-color: var(--danger); }
+.karte-wahl input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.kreis {
+  width: 1.05rem; height: 1.05rem;
+  margin-bottom: .35rem;
+  border-radius: 50%;
+  border: 1px solid var(--caramel);
+  transition: box-shadow .15s ease, background-color .15s ease;
+}
+.k-titel { font-style: italic; font-size: 1.3rem; line-height: 1.25; color: var(--ink); }
+.k-sub { font-weight: 600; font-size: .74rem; letter-spacing: .16em; padding-left: .16em; text-transform: uppercase; color: var(--caramel); }
+.karte-wahl:hover { border-color: var(--feld); }
+.karte-wahl:has(input:checked) { border-color: var(--caramel); background: var(--tint); box-shadow: inset 0 0 0 1px var(--caramel); }
+.karte-wahl:has(input:checked) .kreis { background: var(--caramel); box-shadow: inset 0 0 0 3px var(--papier); }
+.karte-wahl:has(input:focus-visible) { outline: 2px solid var(--caramel); outline-offset: 3px; }
+.wahl.fehlt .karte-wahl { border-color: var(--fehler); }
 
 /* Zähler */
-.zaehlerliste { display: grid; border: 1px solid var(--field); border-radius: var(--radius); background: var(--sheet); }
-.zaehler {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: .6rem .6rem .6rem 1rem;
-}
-.z-lbl { display: grid; min-width: 0; font-weight: 600; }
-.z-ctrl { display: flex; align-items: center; gap: .25rem; flex-shrink: 0; }
+.zaehler { display: grid; justify-items: center; gap: .15rem; }
+.z-ctrl { display: flex; align-items: center; gap: 1.1rem; }
 .z-ctrl button {
-  width: 2.6rem; height: 2.6rem;
+  width: 2.9rem; height: 2.9rem;
   border-radius: 50%;
-  border: 1px solid var(--field);
+  border: 1px solid var(--feld);
   background: transparent;
-  color: var(--gold);
-  font: 600 1.4rem/1 var(--f-serif);
+  color: var(--caramel);
+  font: 500 1.5rem/1 var(--f-serif);
   cursor: pointer;
   display: grid; place-items: center;
+  transition: border-color .15s ease, background-color .15s ease;
 }
-.z-ctrl button:hover:not(:disabled) { border-color: var(--gold); }
-.z-ctrl button:focus-visible { outline: 3px solid color-mix(in srgb, var(--sand) 70%, transparent); outline-offset: 1px; }
-.z-ctrl button:disabled { opacity: .35; cursor: default; }
+.z-ctrl button:hover:not(:disabled) { border-color: var(--caramel); background: var(--tint); }
+.z-ctrl button:focus-visible { outline: 2px solid var(--caramel); outline-offset: 2px; }
+.z-ctrl button:disabled { opacity: .3; cursor: default; }
 .z-ctrl output {
-  min-width: 2.2rem;
+  min-width: 2.6rem;
   text-align: center;
-  color: var(--gold);
-  font-weight: 600;
-  font-size: 1.8rem;
-  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--caramel-hell);
+  font-weight: 500;
+  font-size: 2.6rem;
   line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
 }
-.unterteil { display: grid; gap: 1.75rem; }
+.z-lbl { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
+
+.unterteil { display: grid; gap: 2rem; }
+.trenner { width: 6rem; height: auto; color: var(--sand); justify-self: center; }
+.abschnitt { gap: .7rem; }
+.abschnitt > legend.titel { color: var(--caramel-hell); font-weight: 500; font-size: 1.35rem; letter-spacing: .2em; padding-left: .2em; margin-bottom: .2rem; }
+.abschnitt .wahl { margin-top: .35rem; }
 
 /* Absenden */
 .senden {
   justify-self: stretch;
-  font: 600 1.25rem/1 var(--f-serif);
-  letter-spacing: .04em;
-  padding: 1rem 1.4rem;
+  margin-top: .4rem;
+  font: 600 1.02rem/1 var(--f-serif);
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  padding: 1.15rem 1.4rem 1.1rem 1.66rem;
   border: 0;
-  border-radius: var(--radius);
-  background: var(--gold);
-  color: var(--on-gold);
+  border-radius: 2px;
+  background: var(--caramel);
+  color: var(--auf-caramel);
+  box-shadow: inset 0 0 0 4px var(--caramel), inset 0 0 0 5px color-mix(in srgb, var(--auf-caramel) 45%, transparent);
   cursor: pointer;
   transition: opacity .15s ease;
 }
-.senden:hover { opacity: .92; }
-.senden:focus-visible { outline: 3px solid var(--sand); outline-offset: 3px; }
+.senden:hover { opacity: .93; }
+.senden:focus-visible { outline: 2px solid var(--caramel); outline-offset: 3px; }
 .senden:disabled { opacity: .6; cursor: progress; }
 
 .falle { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Danke */
-.danke { display: grid; gap: 1rem; justify-items: center; text-align: center; }
-.danke h2 {
-  margin: 0;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.85rem;
-  line-height: 1.15;
-  color: var(--gold);
-  text-wrap: balance;
-}
+.danke { justify-self: stretch; display: grid; gap: .9rem; justify-items: center; text-align: center; }
+.danke .zweig { margin: 0 0 .2rem; }
+.danke h2 { margin: 0; display: grid; justify-items: center; gap: .35rem; font-weight: 500; color: var(--caramel-hell); }
 .danke h2:focus { outline: none; }
-.danke p { margin: 0; text-wrap: pretty; }
+.danke .zier { font-family: var(--f-script); font-weight: 400; font-size: clamp(3.4rem, 15vw, 4.4rem); line-height: .9; }
+.danke .versal { font-size: .92rem; font-weight: 600; letter-spacing: .24em; padding-left: .24em; text-transform: uppercase; color: var(--caramel); text-wrap: balance; }
+.danke p { max-width: 24rem; text-wrap: pretty; }
 .zusammenfassung {
   justify-self: stretch;
-  margin: .25rem 0;
+  margin: .5rem 0 .3rem;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: .35rem 1.1rem;
-  padding: .85rem 0;
-  border-block: 1px solid var(--line);
-  text-align: left;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: .5rem 1.1rem;
+  padding: 1rem 0;
+  border-block: 1px solid var(--linie);
 }
-.zusammenfassung dt { font-style: italic; color: var(--muted); }
-.zusammenfassung dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.zusammenfassung dt {
+  text-align: right;
+  color: var(--caramel);
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding-top: .35rem;
+}
+.zusammenfassung dd { margin: 0; text-align: left; font-style: italic; font-size: 1.25rem; overflow-wrap: anywhere; }
 
-footer { text-align: center; font-style: italic; color: var(--muted); font-size: 1.05rem; }
+/* Abschluss mit Siegel */
+.abschluss { display: grid; justify-items: center; gap: .9rem; padding-top: .4rem; text-align: center; }
+.siegel {
+  width: 6.8rem; height: 6.8rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background: var(--korn), var(--blush);
+  color: var(--caramel-hell);
+  box-shadow: inset 0 0 0 1px var(--sand), inset 0 0 0 5px var(--blush), inset 0 0 0 6px var(--sand), var(--schatten);
+}
+.siegel .s-ini { font-size: 1.45rem; line-height: 1; letter-spacing: .1em; padding-left: .1em; }
+.siegel .s-und { font-family: var(--f-script); font-size: 2.3rem; line-height: .55; margin: .02rem 0 .1rem; }
+footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-@media (max-width: 360px) {
-  .wahl { grid-template-columns: minmax(0, 1fr); }
-  .einleger { padding-inline: 1rem; }
+@media (max-width: 370px) {
+  .tisch { --rand: 9px; --rahmen-breite: 18px; --innen: .55rem; }
+  .wahl { gap: .5rem; }
+  .karte-wahl { padding-inline: .45rem; }
+  .k-titel { font-size: 1.12rem; }
+}
+@media (min-width: 600px) {
+  .tisch { --innen: 2rem; padding-top: 2.75rem; gap: 2rem; }
+  .rahmen { padding-block: 2rem 2.1rem; }
+  /* Einladung im Hochformat wie die echte Klappkarte */
+  .karte.vorne { display: grid; aspect-ratio: 5 / 7; }
+  .karte.vorne .rahmen { align-content: center; }
+  .bukett { width: 18rem; margin-bottom: 1.3rem; }
+  .paar { font-size: 3.25rem; }
+  .ecke { width: 4.6rem; }
+  .einladung { font-size: 1.4rem; max-width: 17rem; }
+  .ort { font-size: 1.4rem; }
+  .etikett { font-size: .95rem; padding-inline: 1.6rem 1.8rem; }
 }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs><path id="blatt" d="M0 0C3.6-4.2 10-4.8 15 0C10 4.8 3.6 4.2 0 0Z"/></defs>
+  <defs><g id="bukettHaelfte"><path d="M-9 3C-26 12 -46 10 -70 -2"/><path d="M-15.25 5.77L-16.6 5.27C-19.1 7.37 -22.63 5.49 -24.86 1.65C-20.86 0.68 -17.14 2.05 -16.6 5.27Z"/><path stroke-width=".45" d="M-17.45 4.96Q-21.18 3.38 -23.73 2.21"/><path d="M-22.33 7.7L-23.18 8.75C-22.08 11.6 -24.42 14.47 -28.1 15.59C-28.14 11.44 -26.19 8.25 -23.18 8.75Z"/><path stroke-width=".45" d="M-23.71 9.4Q-25.96 12.45 -27.45 14.6"/><path d="M-29.73 8.55L-30.73 7.78C-33.35 8.87 -35.79 6.4 -36.64 2.62C-33.06 2.86 -30.33 4.97 -30.73 7.78Z"/><path stroke-width=".45" d="M-31.35 7.3Q-34.04 5.02 -35.84 3.39"/><path d="M-37.48 8.32L-38.44 8.98C-38.22 11.6 -40.85 13.4 -44.17 13.44C-43.19 10 -40.81 7.83 -38.44 8.98Z"/><path stroke-width=".45" d="M-39.04 9.39Q-41.64 11.36 -43.39 12.78"/><path d="M-45.59 7.03L-46.24 6.18C-48.64 6.51 -50.11 3.94 -49.99 0.65C-47.1 1.62 -45.31 3.95 -46.24 6.18Z"/><path stroke-width=".45" d="M-46.65 5.65Q-48.37 3.19 -49.5 1.46"/><path d="M-54.06 4.68L-54.97 5.04C-55.28 7.23 -57.76 8.22 -60.48 7.63C-59.04 4.99 -56.69 3.67 -54.97 5.04Z"/><path stroke-width=".45" d="M-55.53 5.27Q-58.03 6.4 -59.73 7.23"/><path d="M-62.92 1.3L-63.31 0.51C-65.31 0.41 -66.1 -1.9 -65.49 -4.55C-63.3 -3.31 -62.21 -1.15 -63.31 0.51Z"/><path stroke-width=".45" d="M-63.56 0.02Q-64.57 -2.24 -65.22 -3.82"/><path d="M-70 -2C-72.79 -0.26 -75.55 -2.42 -76.15 -5.07C-73.67 -6.19 -70.28 -5.28 -70 -2Z"/><path stroke-width=".45" d="M-70.71 -3.66C-72.87 -3.96 -74.72 -3.32 -76 -4.61"/><path stroke-width=".45" d="M-70 -2C-71.86 -0.58 -73.46 -0.46 -74.49 -0.71M-70 -2C-69.98 -4.34 -70.85 -5.69 -71.66 -6.36"/><path stroke-width=".45" d="M-32.08 8.59L-32.96 6.15"/><circle cx="-35.4" cy="3.39" r="0.85" fill="currentColor" stroke="none"/><circle cx="-34.25" cy="2.57" r="0.85" fill="currentColor" stroke="none"/><circle cx="-32.84" cy="2.47" r="0.85" fill="currentColor" stroke="none"/><path stroke-width=".45" d="M-32.69 6.9L-33.37 5.02"/><path stroke-width=".45" d="M-54.73 4.46L-54.79 1.86"/><circle cx="-56.22" cy="-1.53" r="0.85" fill="currentColor" stroke="none"/><circle cx="-54.87" cy="-1.94" r="0.85" fill="currentColor" stroke="none"/><circle cx="-53.51" cy="-1.59" r="0.85" fill="currentColor" stroke="none"/><path stroke-width=".45" d="M-54.77 2.66L-54.82 0.66"/><path d="M-8 -2C-16 -10 -28 -13 -40 -9"/><path d="M-11.05 -4.66L-12.16 -4.57C-13.24 -2.27 -16.3 -2.01 -19.1 -3.57C-16.63 -5.99 -13.6 -6.66 -12.16 -4.57Z"/><path stroke-width=".45" d="M-12.86 -4.51Q-15.99 -4.1 -18.14 -3.76"/><path d="M-18.63 -8.84L-19.1 -9.74C-21.4 -9.83 -22.35 -12.48 -21.69 -15.54C-19.14 -14.15 -17.86 -11.68 -19.1 -9.74Z"/><path stroke-width=".45" d="M-19.39 -10.3Q-20.59 -12.89 -21.36 -14.71"/><path d="M-27.23 -10.69L-27.94 -10.13C-27.64 -8.1 -29.6 -6.56 -32.19 -6.37C-31.6 -9.1 -29.84 -10.91 -27.94 -10.13Z"/><path stroke-width=".45" d="M-28.39 -9.78Q-30.32 -8.12 -31.62 -6.92"/><path d="M-36.4 -9.99L-37.1 -10.39C-38.66 -9.46 -40.42 -10.81 -41.3 -13.12C-39.01 -13.29 -37.1 -12.2 -37.1 -10.39Z"/><path stroke-width=".45" d="M-37.53 -10.63Q-39.44 -11.84 -40.73 -12.71"/><path d="M-40 -9C-40.68 -6.09 -43.84 -5.7 -45.93 -7.02C-45.05 -9.33 -42.29 -10.93 -40 -9Z"/><path stroke-width=".45" d="M-41.52 -9.61C-43.1 -8.41 -43.88 -6.81 -45.53 -6.82"/><path stroke-width=".45" d="M-40 -9C-40.28 -6.89 -41.24 -5.79 -42.06 -5.29M-40 -9C-41.49 -10.52 -42.92 -10.83 -43.87 -10.73"/><path d="M-6 8L-6.83 9.18C-5.43 12.13 -7.93 15.22 -11.99 16.55C-12.13 12.28 -10.08 8.88 -6.83 9.18Z"/><path stroke-width=".45" d="M-7.34 9.92Q-9.67 13.23 -11.27 15.52"/></g><g id="bukett"><use href="#bukettHaelfte"/><use href="#bukettHaelfte" transform="scale(-1 1)"/><path d="M0.24 -1.89C0.27 -1.88 0.38 -1.88 0.45 -1.87C0.52 -1.85 0.6 -1.82 0.67 -1.78C0.73 -1.74 0.8 -1.68 0.86 -1.62C0.91 -1.56 0.96 -1.48 1 -1.4C1.03 -1.31 1.06 -1.22 1.07 -1.12C1.07 -1.03 1.07 -0.93 1.04 -0.83C1.02 -0.73 0.98 -0.62 0.92 -0.53C0.86 -0.43 0.78 -0.34 0.69 -0.26C0.6 -0.18 0.48 -0.1 0.36 -0.05C0.24 0.01 0.11 0.05 -0.03 0.07C-0.17 0.1 -0.33 0.1 -0.47 0.09C-0.62 0.07 -0.78 0.03 -0.92 -0.02C-1.07 -0.08 -1.22 -0.16 -1.34 -0.26C-1.47 -0.35 -1.59 -0.47 -1.69 -0.6C-1.78 -0.74 -1.87 -0.89 -1.92 -1.05C-1.97 -1.21 -2.01 -1.38 -2.01 -1.56C-2.02 -1.73 -1.99 -1.91 -1.94 -2.09C-1.89 -2.26 -1.81 -2.44 -1.7 -2.6C-1.6 -2.76 -1.46 -2.92 -1.3 -3.05C-1.15 -3.18 -0.96 -3.3 -0.76 -3.39C-0.56 -3.47 -0.34 -3.54 -0.12 -3.58C0.11 -3.61 0.35 -3.62 0.58 -3.6C0.82 -3.57 1.06 -3.52 1.28 -3.43C1.51 -3.34 1.73 -3.22 1.93 -3.08C2.12 -2.93 2.31 -2.75 2.45 -2.56C2.6 -2.36 2.73 -2.14 2.81 -1.91C2.9 -1.67 2.95 -1.42 2.97 -1.17C2.98 -0.91 2.95 -0.65 2.88 -0.39C2.82 -0.14 2.71 0.12 2.57 0.35C2.42 0.58 2.23 0.8 2.02 0.99C1.81 1.19 1.55 1.36 1.28 1.49C1.01 1.62 0.71 1.73 0.4 1.78C0.09 1.84 -0.24 1.87 -0.56 1.84C-0.88 1.82 -1.21 1.76 -1.52 1.65C-1.83 1.54 -2.14 1.39 -2.41 1.21C-2.68 1.02 -3.02 0.65 -3.15 0.54"/><path d="M-4.85 1.01C-4.97 0.83 -5.42 0.33 -5.62 -0.07C-5.81 -0.47 -5.97 -0.92 -6.03 -1.38C-6.09 -1.83 -6.08 -2.33 -5.98 -2.79C-5.88 -3.26 -5.69 -3.74 -5.42 -4.16C-5.16 -4.58 -4.8 -4.99 -4.4 -5.31C-4 -5.63 -3.51 -5.91 -3.01 -6.1C-2.52 -6.29 -1.97 -6.41 -1.44 -6.44C-0.92 -6.48 -0.37 -6.43 0.13 -6.33C0.62 -6.22 1.1 -6.03 1.52 -5.81C1.94 -5.59 2.44 -5.14 2.63 -5"/><path d="M-0.94 -5.56C-0.72 -5.63 -0.07 -5.9 0.4 -5.99C0.88 -6.07 1.4 -6.1 1.91 -6.05C2.41 -6 2.95 -5.88 3.43 -5.69C3.91 -5.49 4.39 -5.22 4.78 -4.89C5.18 -4.56 5.53 -4.15 5.79 -3.73C6.05 -3.3 6.24 -2.81 6.33 -2.34C6.42 -1.86 6.43 -1.35 6.35 -0.88C6.27 -0.41 6.09 0.06 5.87 0.47C5.64 0.88 5.33 1.26 4.99 1.57C4.66 1.89 4.05 2.23 3.86 2.36"/><path d="M5.22 -0.17C5.22 0.04 5.31 0.68 5.24 1.11C5.17 1.54 5.04 2 4.82 2.42C4.61 2.83 4.3 3.25 3.95 3.6C3.59 3.94 3.14 4.26 2.67 4.49C2.2 4.72 1.65 4.89 1.12 4.97C0.59 5.06 0.01 5.06 -0.52 4.98C-1.05 4.91 -1.59 4.74 -2.05 4.53C-2.52 4.31 -2.96 4.01 -3.31 3.68C-3.67 3.36 -3.97 2.96 -4.19 2.58C-4.42 2.19 -4.58 1.57 -4.65 1.36"/><path d="M-4.71 -6.77C-4.53 -6.97 -4.05 -7.61 -3.62 -7.98C-3.2 -8.35 -2.71 -8.71 -2.18 -8.99C-1.65 -9.27 -1.05 -9.5 -0.44 -9.65C0.17 -9.8 0.83 -9.88 1.47 -9.88C2.1 -9.87 2.77 -9.78 3.38 -9.62C3.99 -9.45 4.6 -9.19 5.13 -8.88C5.66 -8.57 6.15 -8.17 6.56 -7.75C6.96 -7.32 7.3 -6.83 7.56 -6.34C7.82 -5.84 8 -5.3 8.11 -4.79C8.22 -4.27 8.21 -3.5 8.23 -3.24"/><path stroke-width=".45" d="M2.02 -5.73L2.8 -7.95"/><path d="M5.86 -6.04C6.13 -5.95 6.98 -5.74 7.51 -5.5C8.04 -5.26 8.58 -4.96 9.04 -4.6C9.51 -4.24 9.95 -3.81 10.3 -3.35C10.64 -2.89 10.94 -2.36 11.13 -1.82C11.32 -1.29 11.43 -0.7 11.44 -0.14C11.45 0.42 11.36 1.01 11.18 1.55C11.01 2.09 10.73 2.62 10.4 3.09C10.07 3.56 9.64 4 9.18 4.37C8.73 4.74 8.2 5.06 7.68 5.31C7.16 5.56 6.32 5.79 6.05 5.89"/><path stroke-width=".45" d="M6.82 -0.08L9.46 -0.12"/><path d="M8.33 3.04C8.32 3.29 8.36 4.07 8.26 4.58C8.17 5.1 8.01 5.65 7.76 6.15C7.52 6.64 7.19 7.15 6.8 7.58C6.41 8.02 5.93 8.43 5.41 8.75C4.89 9.08 4.29 9.35 3.69 9.53C3.08 9.71 2.42 9.82 1.78 9.84C1.15 9.86 0.48 9.79 -0.13 9.66C-0.74 9.53 -1.35 9.3 -1.89 9.04C-2.43 8.77 -2.93 8.43 -3.36 8.07C-3.8 7.71 -4.31 7.08 -4.5 6.88"/><path stroke-width=".45" d="M2.2 5.68L3.05 7.88"/><path d="M-0.71 7.91C-0.99 7.98 -1.81 8.25 -2.4 8.33C-2.99 8.41 -3.63 8.45 -4.24 8.4C-4.86 8.35 -5.5 8.23 -6.09 8.04C-6.68 7.84 -7.27 7.57 -7.79 7.23C-8.3 6.9 -8.78 6.48 -9.16 6.03C-9.54 5.58 -9.86 5.06 -10.08 4.53C-10.3 4.01 -10.43 3.43 -10.48 2.88C-10.52 2.32 -10.47 1.75 -10.35 1.21C-10.23 0.68 -10.02 0.15 -9.76 -0.32C-9.51 -0.8 -8.98 -1.42 -8.83 -1.64"/><path stroke-width=".45" d="M-5.46 3.6L-7.57 4.99"/><path d="M-8.77 1.85C-8.93 1.64 -9.48 1.03 -9.75 0.57C-10.02 0.1 -10.25 -0.43 -10.39 -0.96C-10.52 -1.49 -10.59 -2.06 -10.57 -2.62C-10.54 -3.17 -10.43 -3.75 -10.22 -4.28C-10.02 -4.81 -9.72 -5.34 -9.35 -5.8C-8.98 -6.26 -8.52 -6.69 -8.02 -7.04C-7.52 -7.38 -6.93 -7.67 -6.35 -7.88C-5.76 -8.09 -5.12 -8.22 -4.51 -8.29C-3.9 -8.35 -3.26 -8.33 -2.67 -8.27C-2.08 -8.2 -1.24 -7.96 -0.96 -7.89"/><path stroke-width=".45" d="M-5.57 -3.46L-7.73 -4.8"/></g><g id="zweigHaelfte"><path d="M-4 0C-18 3.4 -34 -3.4 -52 0"/><path d="M-9.13 0.82L-10.02 0.19C-12.25 1.24 -14.46 -0.81 -15.35 -4.05C-12.24 -3.98 -9.79 -2.26 -10.02 0.19Z"/><path stroke-width=".45" d="M-10.57 -0.2Q-13 -2.07 -14.63 -3.42"/><path d="M-17.83 0.81L-18.63 1.41C-18.38 3.66 -20.59 5.28 -23.45 5.4C-22.7 2.41 -20.7 0.48 -18.63 1.41Z"/><path stroke-width=".45" d="M-19.14 1.78Q-21.33 3.54 -22.8 4.81"/><path d="M-26.98 -0.05L-27.61 -0.71C-29.62 -0.2 -31.11 -2.24 -31.32 -5.05C-28.77 -4.5 -27.03 -2.69 -27.61 -0.71Z"/><path stroke-width=".45" d="M-28.01 -1.12Q-29.7 -3.05 -30.83 -4.41"/><path d="M-36.59 -0.87L-37.25 -0.37C-37.01 1.48 -38.82 2.85 -41.17 2.98C-40.59 0.51 -38.97 -1.11 -37.25 -0.37Z"/><path stroke-width=".45" d="M-37.66 -0.06Q-39.44 1.42 -40.64 2.49"/><path d="M-46.66 -0.73L-47.26 -1.16C-48.77 -0.44 -50.27 -1.83 -50.88 -4.02C-48.77 -3.98 -47.11 -2.82 -47.26 -1.16Z"/><path stroke-width=".45" d="M-47.64 -1.42Q-49.28 -2.68 -50.39 -3.59"/><path d="M-52 0C-52.98 2.57 -55.91 2.53 -57.65 1.07C-56.56 -0.93 -53.85 -2.04 -52 0Z"/><path stroke-width=".45" d="M-53.31 -0.75C-54.9 0.15 -55.81 1.52 -57.31 1.3"/><path stroke-width=".45" d="M-52 0C-52.52 1.89 -53.52 2.77 -54.34 3.13M-52 0C-53.17 -1.57 -54.43 -2.03 -55.31 -2.06"/></g><g id="zweig"><circle r="1.5" fill="currentColor" stroke="none"/><use href="#zweigHaelfte"/><use href="#zweigHaelfte" transform="scale(-1 1)"/></g><g id="ecke"><path d="M10 10C6 24 5 38 6 54"/><path d="M8.13 17.57L7.18 18.31C7.58 21 4.71 22.69 1.01 22.59C2.07 19.33 4.66 17.29 7.18 18.31Z"/><path stroke-width=".45" d="M6.59 18.78Q3.84 20.74 1.9 22.03"/><path d="M6.8 25.21L7.38 26.14C9.88 26.04 11.49 28.6 11.39 31.75C8.17 30.69 6.21 28.34 7.38 26.14Z"/><path stroke-width=".45" d="M7.75 26.73Q9.52 29.27 10.79 30.99"/><path d="M5.99 32.99L5.29 33.71C5.92 35.89 3.74 37.6 0.67 37.94C1.18 35.12 3.09 33.15 5.29 33.71Z"/><path stroke-width=".45" d="M4.86 34.16Q2.8 36.09 1.35 37.38"/><path d="M5.65 40.99L6.22 41.68C8.23 41.35 9.8 43.26 10.04 45.83C7.32 45.29 5.49 43.59 6.22 41.68Z"/><path stroke-width=".45" d="M6.58 42.12Q8.27 44 9.48 45.27"/><path d="M5.76 49.26L5.27 49.89C5.96 51.57 4.38 53.12 1.97 53.65C2.12 51.37 3.47 49.63 5.27 49.89Z"/><path stroke-width=".45" d="M4.96 50.28Q3.5 52 2.45 53.15"/><path d="M6 54C8.64 55.4 8.2 58.56 6.39 60.24C4.38 58.8 3.55 55.72 6 54Z"/><path stroke-width=".45" d="M5.02 55.31C5.77 57.15 7.12 58.31 6.69 59.91"/><path stroke-width=".45" d="M6 54C7.97 54.82 8.79 56.02 9.06 56.94M6 54C4.15 55.05 3.49 56.35 3.33 57.3"/><path d="M10 10C24 6 38 5 54 6"/><path d="M17.57 8.13L18.31 7.18C17.29 4.66 19.33 2.07 22.59 1.01C22.69 4.71 21 7.58 18.31 7.18Z"/><path stroke-width=".45" d="M18.78 6.59Q20.74 3.84 22.03 1.9"/><path d="M25.21 6.8L26.14 7.38C28.34 6.21 30.69 8.17 31.75 11.39C28.6 11.49 26.04 9.88 26.14 7.38Z"/><path stroke-width=".45" d="M26.73 7.75Q29.27 9.52 30.99 10.79"/><path d="M32.99 5.99L33.71 5.29C33.15 3.09 35.12 1.18 37.94 0.67C37.6 3.74 35.89 5.92 33.71 5.29Z"/><path stroke-width=".45" d="M34.16 4.86Q36.09 2.8 37.38 1.35"/><path d="M40.99 5.65L41.68 6.22C43.59 5.49 45.29 7.32 45.83 10.04C43.26 9.8 41.35 8.23 41.68 6.22Z"/><path stroke-width=".45" d="M42.12 6.58Q44 8.27 45.27 9.48"/><path d="M49.26 5.76L49.89 5.27C49.63 3.47 51.37 2.12 53.65 1.97C53.12 4.38 51.57 5.96 49.89 5.27Z"/><path stroke-width=".45" d="M50.28 4.96Q52 3.5 53.15 2.45"/><path d="M54 6C55.72 3.55 58.8 4.38 60.24 6.39C58.56 8.2 55.4 8.64 54 6Z"/><path stroke-width=".45" d="M55.18 7.14C57.09 6.62 58.42 5.42 59.95 6.05"/><path stroke-width=".45" d="M54 6C55.05 4.15 56.35 3.49 57.3 3.33M54 6C54.82 7.97 56.02 8.79 56.94 9.06"/><path d="M10.13 8.94C10.15 8.94 10.21 8.94 10.25 8.95C10.29 8.96 10.34 8.97 10.38 9C10.41 9.02 10.45 9.05 10.48 9.09C10.51 9.12 10.54 9.17 10.56 9.21C10.58 9.26 10.6 9.31 10.6 9.37C10.61 9.42 10.6 9.48 10.59 9.53C10.57 9.59 10.55 9.65 10.52 9.7C10.48 9.76 10.44 9.81 10.39 9.86C10.34 9.9 10.27 9.94 10.21 9.97C10.14 10 10.06 10.03 9.98 10.04C9.9 10.05 9.82 10.06 9.73 10.05C9.65 10.04 9.56 10.02 9.48 9.99C9.4 9.96 9.31 9.91 9.24 9.86C9.17 9.8 9.1 9.73 9.05 9.66C8.99 9.58 8.95 9.5 8.92 9.41C8.89 9.32 8.87 9.22 8.87 9.12C8.86 9.03 8.88 8.92 8.9 8.82C8.93 8.73 8.98 8.62 9.04 8.53C9.1 8.44 9.18 8.36 9.27 8.28C9.35 8.21 9.46 8.14 9.57 8.09C9.68 8.04 9.81 8 9.93 7.98C10.06 7.96 10.2 7.96 10.33 7.97C10.46 7.99 10.6 8.02 10.72 8.07C10.85 8.12 10.98 8.18 11.09 8.27C11.2 8.35 11.3 8.45 11.38 8.56C11.47 8.67 11.54 8.79 11.59 8.93C11.63 9.06 11.66 9.2 11.67 9.34C11.68 9.49 11.66 9.64 11.63 9.78C11.59 9.92 11.53 10.07 11.45 10.2C11.36 10.33 11.26 10.45 11.14 10.56C11.02 10.67 10.87 10.77 10.72 10.84C10.57 10.91 10.4 10.97 10.23 11.01C10.05 11.04 9.87 11.05 9.68 11.04C9.5 11.03 9.32 10.99 9.14 10.93C8.97 10.87 8.79 10.78 8.64 10.68C8.49 10.58 8.3 10.37 8.23 10.31"/><path d="M7.27 10.57C7.2 10.47 6.95 10.18 6.83 9.96C6.72 9.74 6.64 9.48 6.6 9.22C6.57 8.97 6.57 8.69 6.63 8.43C6.69 8.16 6.79 7.89 6.94 7.66C7.09 7.42 7.29 7.19 7.52 7.01C7.75 6.83 8.02 6.67 8.3 6.56C8.58 6.46 8.89 6.39 9.19 6.37C9.48 6.35 9.79 6.37 10.07 6.43C10.35 6.49 10.62 6.6 10.86 6.72C11.09 6.85 11.38 7.1 11.48 7.18"/><path d="M9.47 6.87C9.6 6.83 9.96 6.67 10.23 6.63C10.49 6.58 10.79 6.56 11.08 6.59C11.36 6.62 11.66 6.69 11.93 6.79C12.2 6.9 12.47 7.06 12.7 7.24C12.92 7.43 13.12 7.66 13.26 7.9C13.41 8.14 13.52 8.42 13.57 8.68C13.62 8.95 13.62 9.24 13.58 9.5C13.53 9.77 13.43 10.03 13.31 10.26C13.18 10.49 13 10.71 12.81 10.89C12.63 11.06 12.28 11.26 12.18 11.33"/><path d="M12.94 9.9C12.94 10.02 12.99 10.38 12.95 10.63C12.92 10.87 12.84 11.13 12.72 11.36C12.6 11.6 12.43 11.83 12.22 12.03C12.02 12.22 11.77 12.4 11.5 12.53C11.24 12.66 10.93 12.76 10.63 12.8C10.33 12.85 10.01 12.85 9.71 12.81C9.41 12.77 9.11 12.67 8.84 12.55C8.58 12.43 8.33 12.26 8.13 12.07C7.93 11.89 7.76 11.67 7.64 11.45C7.51 11.24 7.42 10.88 7.38 10.77"/><path d="M7.34 6.19C7.45 6.07 7.72 5.71 7.96 5.5C8.2 5.29 8.47 5.09 8.77 4.93C9.07 4.78 9.41 4.64 9.75 4.56C10.09 4.48 10.47 4.43 10.83 4.43C11.19 4.44 11.56 4.49 11.91 4.58C12.25 4.67 12.59 4.82 12.89 4.99C13.19 5.17 13.47 5.39 13.7 5.63C13.92 5.87 14.12 6.15 14.26 6.43C14.41 6.71 14.51 7.01 14.57 7.3C14.64 7.59 14.63 8.03 14.64 8.17"/><path stroke-width=".45" d="M11.14 6.77L11.58 5.52"/><path d="M13.3 6.6C13.46 6.65 13.93 6.77 14.23 6.9C14.53 7.04 14.83 7.21 15.1 7.41C15.36 7.61 15.61 7.85 15.8 8.11C16 8.37 16.17 8.67 16.27 8.97C16.38 9.27 16.44 9.6 16.45 9.92C16.45 10.24 16.4 10.57 16.3 10.87C16.21 11.18 16.05 11.48 15.86 11.74C15.67 12.01 15.43 12.26 15.18 12.46C14.92 12.67 14.62 12.85 14.33 12.99C14.03 13.14 13.56 13.26 13.41 13.32"/><path stroke-width=".45" d="M13.84 9.95L15.33 9.93"/><path d="M14.7 11.71C14.69 11.86 14.71 12.29 14.66 12.58C14.6 12.88 14.51 13.18 14.38 13.46C14.24 13.75 14.06 14.03 13.83 14.27C13.61 14.52 13.34 14.75 13.05 14.93C12.76 15.12 12.42 15.27 12.08 15.37C11.74 15.47 11.36 15.53 11.01 15.55C10.65 15.56 10.27 15.52 9.93 15.44C9.58 15.37 9.24 15.24 8.94 15.09C8.63 14.94 8.35 14.75 8.1 14.55C7.86 14.35 7.57 13.99 7.47 13.88"/><path stroke-width=".45" d="M11.24 13.2L11.72 14.44"/><path d="M9.6 14.46C9.44 14.5 8.98 14.65 8.65 14.7C8.31 14.74 7.96 14.76 7.61 14.73C7.26 14.71 6.9 14.64 6.57 14.53C6.23 14.42 5.9 14.27 5.61 14.08C5.32 13.89 5.05 13.65 4.84 13.4C4.62 13.15 4.44 12.85 4.32 12.56C4.19 12.26 4.12 11.93 4.09 11.62C4.07 11.31 4.1 10.98 4.17 10.68C4.23 10.38 4.36 10.09 4.5 9.82C4.64 9.55 4.94 9.2 5.03 9.08"/><path stroke-width=".45" d="M6.92 12.03L5.73 12.81"/><path d="M5.06 11.05C4.97 10.92 4.66 10.58 4.51 10.32C4.35 10.05 4.22 9.76 4.15 9.46C4.07 9.16 4.03 8.84 4.04 8.53C4.06 8.21 4.12 7.89 4.24 7.59C4.35 7.29 4.52 6.99 4.73 6.73C4.94 6.47 5.2 6.23 5.48 6.03C5.76 5.84 6.09 5.68 6.42 5.56C6.75 5.44 7.11 5.37 7.46 5.33C7.8 5.29 8.16 5.3 8.5 5.34C8.83 5.38 9.3 5.52 9.46 5.55"/><path stroke-width=".45" d="M6.86 8.05L5.64 7.3"/></g></defs>
 </svg>
-<main class="wrap">
+<main class="tisch">
 
-  <header class="kopf">
-    <svg class="krone" viewBox="0 18 200 44" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-      <path d="M100 27Q108.3 23.7 109.5 32.5Q116.5 38 109.5 43.5Q108.3 52.3 100 49Q91.8 52.3 90.5 43.5Q83.5 38 90.5 32.5Q91.8 23.7 100 27Z"/>
-      <path d="M100 38m0 -1.5a2.2 2.2 0 1 1 -2.4 2.6a4.4 4.4 0 1 1 5.6 4.2a6.8 6.8 0 0 1 -9.6 -6.2a7.6 7.6 0 0 1 7 -7.8"/>
-      <g id="zweigHaelfte">
-        <path d="M87 41C68 47 42 49 14 41"/>
-        <use href="#blatt" transform="translate(78.6 43.3) rotate(131.1) scale(0.9)"/>
-        <use href="#blatt" transform="translate(68.1 45.2) rotate(208.3) scale(0.88)"/>
-        <use href="#blatt" transform="translate(56.8 46.2) rotate(141.5) scale(0.82)"/>
-        <use href="#blatt" transform="translate(44.8 46.1) rotate(-141.2) scale(0.76)"/>
-        <use href="#blatt" transform="translate(32.1 44.9) rotate(-207.8) scale(0.66)"/>
-        <use href="#blatt" transform="translate(20.7 42.7) rotate(-130.9) scale(0.55)"/>
-        <use href="#blatt" transform="translate(95 51) rotate(118) scale(0.75)"/>
-        <path d="M14 41c-3.4 -.6 -5.6 -3.2 -5 -6.4c3 .4 5.2 3 5 6.4Z"/>
-        <circle cx="9.5" cy="44.5" r=".9"/>
-        <circle cx="12.5" cy="46.8" r=".9"/>
-      </g>
-      <use href="#zweigHaelfte" transform="translate(200 0) scale(-1 1)"/>
-    </svg>
+  <header class="karte vorne">
+    <div class="rahmen">
+      <svg class="orn ecke ol" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><use href="#ecke"/></svg>
+      <svg class="orn ecke or" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><use href="#ecke"/></svg>
+      <svg class="orn ecke ul" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><use href="#ecke"/></svg>
+      <svg class="orn ecke ur" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><use href="#ecke"/></svg>
 
-    <h1 class="paar" id="paar" aria-label="Feli und Christian"><span class="name">Feli</span><span class="und">und</span><span class="name">Christian</span></h1>
-    <p class="einladung">laden euch herzlich zu ihrer Hochzeit ein am</p>
-    <p class="anhaenger" id="datum">Samstag, 24. Juli 2027</p>
-    <p class="ort" id="ort">Gutshof Edenholzhausen bei Dachau</p>
-
-    <svg class="zweig" viewBox="0 0 120 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-      <circle cx="60" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-      <g id="trennerHaelfte">
-        <path d="M56 12C46 14.6 33 9.4 14 12"/>
-        <use href="#blatt" transform="translate(49.6 12.7) rotate(145.5) scale(0.7)"/>
-        <use href="#blatt" transform="translate(41.6 12.3) rotate(-140.7) scale(0.65)"/>
-        <use href="#blatt" transform="translate(32.3 11.5) rotate(-210.2) scale(0.6)"/>
-        <use href="#blatt" transform="translate(22.2 11.3) rotate(212) scale(0.5)"/>
-      </g>
-      <use href="#trennerHaelfte" transform="translate(120 0) scale(-1 1)"/>
-    </svg>
+      <svg class="orn bukett" viewBox="-100 -24 200 48" aria-hidden="true" focusable="false"><use href="#bukett"/></svg>
+      <h1 class="paar" id="paar" aria-label="Felicitas und Christian"><span class="name">Felicitas</span><span class="und">und</span><span class="name">Christian</span></h1>
+      <p class="einladung">laden euch herzlich zu ihrer Hochzeit ein am</p>
+      <div class="band"><p class="etikett" id="datum">Samstag, 24. Juli 2027</p></div>
+      <p class="ort" id="ort">Hofgut Edenholzhausen, Schwabhausen</p>
+      <svg class="orn zweig" viewBox="-60 -12 120 24" aria-hidden="true" focusable="false"><use href="#zweig"/></svg>
+    </div>
   </header>
 
-  <div class="einleger">
-    <p class="intro" id="intro">Wir freuen uns sehr, wenn ihr diesen Tag mit uns feiert. Bitte gebt uns bis zum <strong id="frist">15. Mai 2027</strong> Bescheid, ob ihr dabei seid.</p>
-
-    <p class="hinweis" id="vorschau" hidden><b>Vorschau:</b> Antworten werden noch nicht gespeichert. Sobald die Adresse der Tabelle eingetragen ist, landen sie direkt bei euch.</p>
-
-    <form id="rsvp" novalidate>
-      <div class="feld">
-        <label for="name">Wer antwortet?</label>
-        <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="z. B. Anna und Max Huber" aria-describedby="name-hilfe err-name">
-        <p class="hilfe" id="name-hilfe">Wenn ihr zu zweit kommt, reicht eine gemeinsame Antwort.</p>
-        <p class="fehler" id="err-name" hidden></p>
+  <section class="karte antwort" aria-labelledby="antwort-titel">
+    <div class="rahmen">
+      <div class="antwort-kopf" id="intro">
+        <svg class="orn zweig" viewBox="-60 -12 120 24" aria-hidden="true" focusable="false"><use href="#zweig"/></svg>
+        <h2 class="titel" id="antwort-titel">Rückmeldung</h2>
+        <p class="frist">bis zum <span id="frist">1. Mai 2027</span></p>
+        <p class="intro">Wir freuen uns sehr, wenn ihr diesen Tag mit uns feiert. Sagt uns hier, ob ihr dabei seid.</p>
       </div>
 
-      <fieldset class="feld">
-        <legend>Seid ihr dabei?</legend>
-        <div class="wahl" id="wahl-antwort">
-          <label class="karte"><input type="radio" name="antwort" id="antwort-zusage" value="zusage"><span class="k-titel">Wir kommen gern</span><span class="k-sub">Zusage</span></label>
-          <label class="karte"><input type="radio" name="antwort" id="antwort-absage" value="absage"><span class="k-titel">Leider nicht</span><span class="k-sub">Absage</span></label>
-        </div>
-        <p class="fehler" id="err-antwort" hidden></p>
-      </fieldset>
+      <p class="hinweis" id="vorschau" hidden><b>Vorschau</b> Antworten werden noch nicht gespeichert. Sobald die Adresse der Tabelle eingetragen ist, landen sie direkt bei euch.</p>
 
-      <div class="unterteil" id="zusageTeil" hidden>
-        <fieldset class="feld">
-          <legend>Wie viele kommen?</legend>
-          <div class="zaehlerliste">
-            <div class="zaehler" data-key="personen">
-              <span class="z-lbl" id="lbl-personen">Personen</span>
-              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Eine Person weniger">&minus;</button><output id="personen" aria-labelledby="lbl-personen">1</output><button type="button" data-d="1" aria-label="Eine Person mehr">+</button></span>
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset class="feld" id="busFeld">
-          <legend>Fahrt ihr mit dem Bus?</legend>
-          <p class="hilfe" id="busInfo">Hinfahrt mittags ab Pfaffenhofen, Rückfahrt um Mitternacht.</p>
-          <div class="wahl" id="wahl-bus">
-            <label class="karte"><input type="radio" name="bus" id="bus-ja" value="ja"><span class="k-titel">Ja, gern</span></label>
-            <label class="karte"><input type="radio" name="bus" id="bus-nein" value="nein"><span class="k-titel">Nein, wir kommen selbst</span></label>
-          </div>
-          <div class="zaehlerliste" id="busPlaetzeZeile" hidden>
-            <div class="zaehler" data-key="busPlaetze">
-              <span class="z-lbl" id="lbl-busPlaetze">Plätze im Bus</span>
-              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Busplätze: einer weniger">&minus;</button><output id="busPlaetze" aria-labelledby="lbl-busPlaetze">1</output><button type="button" data-d="1" aria-label="Busplätze: einer mehr">+</button></span>
-            </div>
-          </div>
-          <p class="fehler" id="err-bus" hidden></p>
-        </fieldset>
-
+      <form id="rsvp" novalidate>
         <div class="feld">
-          <label for="kontakt">Handynummer</label>
-          <input id="kontakt" type="tel" inputmode="tel" maxlength="25" autocomplete="tel" placeholder="z. B. 0170 1234567" aria-describedby="kontakt-hilfe err-kontakt">
-          <p class="hilfe" id="kontakt-hilfe">Damit wir euch bei Fragen zum Ablauf oder zum Bus erreichen.</p>
-          <p class="fehler" id="err-kontakt" hidden></p>
+          <label for="name">Wer antwortet?</label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="z. B. Anna und Max Huber" aria-describedby="name-hilfe err-name">
+          <p class="hilfe" id="name-hilfe">Wenn ihr zu zweit kommt, reicht eine gemeinsame Antwort.</p>
+          <p class="fehler" id="err-name" hidden></p>
         </div>
-      </div>
 
-      <div class="feld" id="nachrichtFeld" hidden>
-        <label for="nachricht">Ein paar Worte an uns <span class="opt">optional</span></label>
-        <textarea id="nachricht" rows="3" maxlength="1000"></textarea>
-      </div>
+        <fieldset class="feld">
+          <legend>Seid ihr dabei?</legend>
+          <div class="wahl" id="wahl-antwort">
+            <label class="karte-wahl"><input type="radio" name="antwort" id="antwort-zusage" value="zusage"><span class="kreis" aria-hidden="true"></span><span class="k-titel">Wir kommen gern</span><span class="k-sub">Zusage</span></label>
+            <label class="karte-wahl"><input type="radio" name="antwort" id="antwort-absage" value="absage"><span class="kreis" aria-hidden="true"></span><span class="k-titel">Leider nicht</span><span class="k-sub">Absage</span></label>
+          </div>
+          <p class="fehler" id="err-antwort" hidden></p>
+        </fieldset>
 
-      <div class="falle" aria-hidden="true">
-        <label for="website">Bitte leer lassen</label>
-        <input id="website" type="text" tabindex="-1" autocomplete="off">
-      </div>
+        <div class="unterteil" id="zusageTeil" hidden>
+          <fieldset class="feld">
+            <legend>Wie viele kommen?</legend>
+            <div class="zaehler" data-key="personen">
+              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Eine Person weniger">&minus;</button><output id="personen" aria-labelledby="lbl-personen">1</output><button type="button" data-d="1" aria-label="Eine Person mehr">+</button></span>
+              <span class="z-lbl" id="lbl-personen">Person</span>
+            </div>
+          </fieldset>
 
-      <button type="submit" class="senden" id="senden">Antwort senden</button>
-      <p class="fehler" id="err-senden" role="alert" hidden></p>
-    </form>
+          <svg class="orn trenner" id="busTrenner" viewBox="-60 -12 120 24" aria-hidden="true" focusable="false"><use href="#zweig"/></svg>
 
-    <section class="danke" id="danke" hidden aria-live="polite">
-      <h2 id="dankeTitel" tabindex="-1"></h2>
-      <p id="dankeText"></p>
-      <dl class="zusammenfassung" id="dankeDaten"></dl>
-      <p class="hilfe">Hat sich bei euch etwas geändert? Dann sagt uns einfach direkt Bescheid.</p>
-    </section>
-  </div>
+          <fieldset class="feld abschnitt" id="busFeld">
+            <legend class="titel">Shuttlebus</legend>
+            <p class="hilfe" id="busInfo">Hinfahrt direkt nach der Trauung von der Spitalkirche zum Hofgut. Rückfahrt um 0:30 Uhr vom Hofgut zurück zum Hauptplatz Pfaffenhofen.</p>
+            <p class="frage" id="bus-frage">Fahrt ihr mit?</p>
+            <div class="wahl" id="wahl-bus" role="radiogroup" aria-labelledby="bus-frage">
+              <label class="karte-wahl"><input type="radio" name="bus" id="bus-ja" value="ja"><span class="kreis" aria-hidden="true"></span><span class="k-titel">Ja, gern</span><span class="k-sub">Mitfahren</span></label>
+              <label class="karte-wahl"><input type="radio" name="bus" id="bus-nein" value="nein"><span class="kreis" aria-hidden="true"></span><span class="k-titel">Nein</span><span class="k-sub">Selbst anreisen</span></label>
+            </div>
+            <div class="zaehler" id="busPlaetzeZeile" data-key="busPlaetze" hidden>
+              <span class="z-ctrl"><button type="button" data-d="-1" aria-label="Busplätze: einer weniger">&minus;</button><output id="busPlaetze" aria-labelledby="lbl-busPlaetze">1</output><button type="button" data-d="1" aria-label="Busplätze: einer mehr">+</button></span>
+              <span class="z-lbl" id="lbl-busPlaetze">Platz im Bus</span>
+            </div>
+            <p class="fehler" id="err-bus" hidden></p>
+          </fieldset>
 
-  <footer id="fusszeile">Fragen? Meldet euch jederzeit bei uns.</footer>
+          <svg class="orn trenner" viewBox="-60 -12 120 24" aria-hidden="true" focusable="false"><use href="#zweig"/></svg>
+
+          <div class="feld">
+            <label for="kontakt">Handynummer</label>
+            <input id="kontakt" type="tel" inputmode="tel" maxlength="25" autocomplete="tel" placeholder="z. B. 0170 1234567" aria-describedby="kontakt-hilfe err-kontakt">
+            <p class="hilfe" id="kontakt-hilfe">Damit wir euch bei Fragen zum Ablauf oder zum Bus erreichen.</p>
+            <p class="fehler" id="err-kontakt" hidden></p>
+          </div>
+        </div>
+
+        <div class="feld" id="nachrichtFeld" hidden>
+          <label for="nachricht">Ein paar Worte an uns <span class="opt">optional</span></label>
+          <textarea id="nachricht" rows="3" maxlength="1000"></textarea>
+        </div>
+
+        <div class="falle" aria-hidden="true">
+          <label for="website">Bitte leer lassen</label>
+          <input id="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="senden" id="senden">Antwort senden</button>
+        <p class="fehler" id="err-senden" role="alert" hidden></p>
+      </form>
+
+      <section class="danke" id="danke" hidden aria-live="polite">
+        <svg class="orn zweig" viewBox="-60 -12 120 24" aria-hidden="true" focusable="false"><use href="#zweig"/></svg>
+        <h2 id="dankeTitel" tabindex="-1"></h2>
+        <p id="dankeText"></p>
+        <dl class="zusammenfassung" id="dankeDaten"></dl>
+        <p class="hilfe">Hat sich bei euch etwas geändert? Dann sagt uns einfach direkt Bescheid.</p>
+      </section>
+    </div>
+  </section>
+
+  <footer class="abschluss">
+    <div class="siegel" aria-hidden="true"><span class="s-ini" id="siegel1">F</span><span class="s-und">und</span><span class="s-ini" id="siegel2">C</span></div>
+    <p id="fusszeile">Fragen? Meldet euch jederzeit bei uns.</p>
+  </footer>
 </main>
 
 <!-- Alle Einstellungen stehen in der Datei einstellungen.js im selben Ordner. -->
@@ -456,12 +578,12 @@ footer { text-align: center; font-style: italic; color: var(--muted); font-size:
 // Standardwerte, falls einstellungen.js fehlt
 const CONFIG = Object.assign({
   scriptUrl: '',
-  paar: 'Feli & Christian',
+  paar: 'Felicitas & Christian',
   datum: 'Samstag, 24. Juli 2027',
-  ort: 'Gutshof Edenholzhausen bei Dachau',
-  frist: '15. Mai 2027',
+  ort: 'Hofgut Edenholzhausen, Schwabhausen',
+  frist: '1. Mai 2027',
   bus: true,
-  busInfo: 'Hinfahrt mittags ab Pfaffenhofen, Rückfahrt um Mitternacht.',
+  busInfo: 'Hinfahrt direkt nach der Trauung von der Spitalkirche zum Hofgut. Rückfahrt um 0:30 Uhr vom Hofgut zurück zum Hauptplatz Pfaffenhofen.',
   fusszeile: 'Fragen? Meldet euch jederzeit bei uns.'
 }, window.EINSTELLUNGEN || {});
 
@@ -497,13 +619,22 @@ const CONFIG = Object.assign({
     });
     h.setAttribute('aria-label', teile.join(' und '));
     document.title = 'Hochzeit ' + CONFIG.paar;
+    // Siegel mit den Anfangsbuchstaben
+    if (teile.length === 2) {
+      $('siegel1').textContent = teile[0].charAt(0).toUpperCase();
+      $('siegel2').textContent = teile[1].charAt(0).toUpperCase();
+    }
   }
-  if (!CONFIG.bus) $('busFeld').remove();
+  if (!CONFIG.bus) {
+    $('busFeld').remove();
+    $('busTrenner').remove();
+  }
   $('vorschau').hidden = echt;
 
   // Zähler
   const grenzen = { personen: [1, 12], busPlaetze: [1, 12] };
   const werte = { personen: 1, busPlaetze: 1 };
+  const einheit = { personen: ['Person', 'Personen'], busPlaetze: ['Platz im Bus', 'Plätze im Bus'] };
   let busManuell = false;
 
   const gesamt = () => werte.personen;
@@ -518,6 +649,8 @@ const CONFIG = Object.assign({
       const max = k === 'busPlaetze' ? gesamt() : grenzen[k][1];
       zeile.querySelector('[data-d="-1"]').disabled = werte[k] <= grenzen[k][0];
       zeile.querySelector('[data-d="1"]').disabled = werte[k] >= max;
+      const lbl = $('lbl-' + k);
+      if (lbl) lbl.textContent = einheit[k][werte[k] === 1 ? 0 : 1];
     });
   }
 
@@ -629,7 +762,15 @@ const CONFIG = Object.assign({
   // Danke-Ansicht. still = beim Öffnen der Seite (kein Springen, kein Fokus)
   function zeigeDanke(d, wann, still) {
     const z = d.antwort === 'zusage';
-    $('dankeTitel').textContent = z ? 'Wunderbar, wir freuen uns auf euch!' : 'Schade, dass ihr nicht dabei sein könnt.';
+    const titel = $('dankeTitel');
+    titel.textContent = '';
+    const zier = document.createElement('span');
+    zier.className = 'zier';
+    zier.textContent = z ? 'Wunderbar' : 'Schade';
+    const versal = document.createElement('span');
+    versal.className = 'versal';
+    versal.textContent = z ? 'wir freuen uns auf euch' : 'dass ihr nicht dabei sein könnt';
+    titel.append(zier, versal);
     $('dankeText').textContent = z
       ? 'Eure Zusage ist bei uns angekommen. Wir melden uns rechtzeitig mit allen Details zum Ablauf.'
       : 'Danke, dass ihr Bescheid gegeben habt. Wir denken an euch und stoßen auf euch an.';
