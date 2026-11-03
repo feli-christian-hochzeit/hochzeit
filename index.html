@@ -26,9 +26,10 @@
   --linie: #e6d6cb;
   --feld: #c4a891;
   --tint: #fbf3ef;
-  --band-hell: #eceedf;
-  --band: #dcdfcb;
-  --band-dunkel: #c5c9b1;
+  --band-hell: #c6987a;
+  --band: #b4866a;
+  --band-dunkel: #9d7156;
+  --band-kante: #956a50;
   --etikett: #ffffff;
   --fehler: #a1381f;
   --auf-caramel: #fffcfa;
@@ -50,9 +51,10 @@
     --linie: #3e302a;
     --feld: #7c6254;
     --tint: #2e231f;
-    --band-hell: #727663;
-    --band: #5d614f;
-    --band-dunkel: #4a4d3e;
+    --band-hell: #a07a5e;
+    --band: #8a654b;
+    --band-dunkel: #6f503b;
+    --band-kante: #634732;
     --etikett: #382b26;
     --fehler: #f0997f;
     --auf-caramel: #1b1412;
@@ -73,9 +75,10 @@
   --linie: #3e302a;
   --feld: #7c6254;
   --tint: #2e231f;
-  --band-hell: #727663;
-  --band: #5d614f;
-  --band-dunkel: #4a4d3e;
+  --band-hell: #a07a5e;
+  --band: #8a654b;
+  --band-dunkel: #6f503b;
+  --band-kante: #634732;
   --etikett: #382b26;
   --fehler: #f0997f;
   --auf-caramel: #1b1412;
@@ -188,12 +191,13 @@ p { margin: 0; }
   content: "";
   position: absolute;
   inset: 50% 0 auto;
-  height: 1.7rem;
+  height: .95rem;
   transform: translateY(-50%);
+  /* schmales Samtband in Karamell: matter Schimmer, feine Kanten */
   background:
-    repeating-linear-gradient(90deg, rgb(255 255 255 / .07) 0 1px, transparent 1px 3px),
-    linear-gradient(180deg, var(--band-hell) 0%, var(--band) 38%, var(--band) 62%, var(--band-dunkel) 100%);
-  box-shadow: 0 1px 2px rgb(60 50 30 / .18);
+    repeating-linear-gradient(90deg, rgb(255 255 255 / .03) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, var(--band-dunkel) 0%, var(--band-hell) 26%, var(--band) 58%, var(--band-dunkel) 100%);
+  box-shadow: inset 0 1px 0 var(--band-kante), inset 0 -1px 0 var(--band-kante), 0 1px 2px rgb(60 40 30 / .16);
 }
 .etikett {
   position: relative;
