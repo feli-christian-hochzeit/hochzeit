@@ -109,11 +109,11 @@ p { margin: 0; }
   z-index: 1;
   font-family: var(--f-script);
   font-weight: 400;
-  font-size: 1.62em;
-  line-height: .75;
+  font-size: 1.28em;
+  line-height: .8;
   letter-spacing: 0;
   text-transform: none;
-  margin-block: -.03em -.1em;
+  margin-block: .02em -.02em;
   padding-inline: .12em;
 }
 .anlass {
@@ -237,6 +237,10 @@ input::placeholder { font-size: 1.3rem; }
 .beispiel small { font-size: 1rem; font-style: italic; opacity: .85; }
 /* Beispiele in der Kartenschrift, kursiv; an 320 px Handys etwa 1,1rem, sonst bis 1,4rem */
 .beispiel .b-schrift, .beispiel .b-zahl { font-size: 1.25rem; font-size: min(1.4rem, 7.6cqi); font-style: italic; letter-spacing: .02em; opacity: .9; }
+/* Langer Beispielname: kleiner, damit er auf jedem Handy in eine Zeile passt (390 px etwa 14 px, 320 px etwa 12 px) */
+#name-beispiel { gap: .35em; padding-left: 2.2rem; }
+#name-beispiel small { font-size: .85rem; }
+#name-beispiel .b-schrift { font-size: 1.05rem; font-size: min(1.3rem, 5.1cqi); letter-spacing: .01em; }
 .eingabe input:focus + .beispiel { opacity: .4; }
 .eingabe input:not(:placeholder-shown) + .beispiel { opacity: 0; }
 /* iPhone macht Nummern sonst zu blauen Links */
@@ -382,20 +386,13 @@ textarea {
 }
 .zusammenfassung dd { margin: 0; text-align: left; font-style: italic; font-size: 1.25rem; overflow-wrap: anywhere; }
 
-/* Abschluss mit Siegel */
+/* Abschluss mit Monogramm: F | C wie gesetzt, darunter Namen und Datum klein gesperrt */
 .abschluss { display: grid; justify-items: center; gap: .9rem; padding-top: .4rem; text-align: center; }
-.siegel {
-  width: 6.8rem; height: 6.8rem;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  background: var(--korn), var(--blush);
-  color: var(--caramel-hell);
-  box-shadow: inset 0 0 0 1px var(--sand), inset 0 0 0 5px var(--blush), inset 0 0 0 6px var(--sand), var(--schatten);
-}
-.siegel .s-ini { font-size: 1.45rem; line-height: 1; letter-spacing: .1em; padding-left: .1em; }
-.siegel .s-und { font-family: var(--f-script); font-size: 2.3rem; line-height: .55; margin: .02rem 0 .1rem; }
+.monogramm { display: grid; justify-items: center; gap: .35rem; }
+.m-ini { display: flex; align-items: center; gap: .7rem; font-weight: 400; font-size: 2rem; line-height: 1; color: var(--caramel-hell); }
+.m-ini .m-f, .m-ini .m-c { padding: .12em .25em; margin: -.12em -.25em; }
+.m-strich { width: 1px; height: 1.85rem; background: var(--sand); }
+.abschluss .m-namen, .abschluss .m-datum { margin: 0; font-style: normal; font-weight: 600; font-size: .62rem; line-height: 1.5; letter-spacing: .28em; padding-left: .28em; text-transform: uppercase; color: var(--caramel); }
 footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
 .kontakte { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 2.6rem; }
 .kontakte li { display: grid; justify-items: center; gap: .1rem; }
@@ -434,9 +431,8 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
   background: linear-gradient(100deg, transparent 38%, rgb(255 236 210 / .32) 50%, transparent 62%) 0 0 / 260% 100% no-repeat;
   animation: glanz 9s ease-in-out infinite;
 }
-.siegel { box-shadow: inset 0 0 0 1px var(--sand), inset 0 0 0 5px var(--blush), inset 0 0 0 6px var(--sand), 0 0 24px -6px rgb(200 150 95 / .5), var(--schatten); }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  :is(.paar .name, .paar .und, .titel, .danke .zier, .siegel .s-ini, .siegel .s-und) {
+  :is(.paar .name, .paar .und, .titel, .danke .zier, .m-ini .m-f, .m-ini .m-c) {
     background-image: linear-gradient(100deg, #9a6a45 0%, #b5865a 26%, #dcbb8c 44%, #c2955f 56%, #8f603c 76%, #a6744e 100%);
     background-size: 300% 100%;
     -webkit-background-clip: text;
@@ -509,7 +505,7 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
           <label for="name">Wer antwortet?</label>
           <div class="eingabe">
             <input id="name" name="name" type="text" autocomplete="name" maxlength="120" placeholder=" " aria-describedby="name-beispiel name-hilfe err-name">
-            <span class="beispiel" id="name-beispiel" aria-hidden="true"><small>z. B.</small> <span class="b-schrift">Anna und Max Huber</span></span>
+            <span class="beispiel" id="name-beispiel" aria-hidden="true"><small>z. B.</small> <span class="b-schrift">Sebastian Amann und Simone Köhler</span></span>
           </div>
           <p class="hilfe" id="name-hilfe">Wenn ihr zu zweit kommt, reicht eine gemeinsame Antwort.</p>
           <p class="fehler" id="err-name" hidden></p>
@@ -588,7 +584,11 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
   </section>
 
   <footer class="abschluss">
-    <div class="siegel" aria-hidden="true"><span class="s-ini" id="siegel1">F</span><span class="s-und">und</span><span class="s-ini" id="siegel2">C</span></div>
+    <div class="monogramm" aria-hidden="true">
+      <div class="m-ini"><span class="m-f" id="siegel1">F</span><span class="m-strich"></span><span class="m-c" id="siegel2">C</span></div>
+      <p class="m-namen" id="mNamen">Felicitas und Christian</p>
+      <p class="m-datum" id="mDatum">24 · 07 · 2027</p>
+    </div>
     <p id="fusszeile">Fragen? Meldet euch jederzeit bei uns.</p>
     <ul class="kontakte" id="kontakte">
       <li><span class="k-name">Felicitas</span><a href="tel:+4917632400290">0176 32400290</a></li>
@@ -652,6 +652,16 @@ const CONFIG = Object.assign({
       $('siegel1').textContent = teile[0].charAt(0).toUpperCase();
       $('siegel2').textContent = teile[1].charAt(0).toUpperCase();
     }
+    $('mNamen').textContent = teile.join(' und ');
+  }
+  // Datum unter dem Monogramm als 24 · 07 · 2027 (aus datum, sonst ohne Wochentag)
+  if (CONFIG.datum) {
+    const MONATE = ['januar', 'februar', 'märz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember'];
+    const m = String(CONFIG.datum).match(/(\d{1,2})\.\s*([A-Za-zÄÖÜäöü]+)\s+(\d{4})/);
+    const nr = m ? MONATE.indexOf(m[2].toLowerCase()) + 1 : 0;
+    $('mDatum').textContent = nr
+      ? m[1].padStart(2, '0') + ' · ' + String(nr).padStart(2, '0') + ' · ' + m[3]
+      : String(CONFIG.datum).replace(/^[^,]*,\s*/, '');
   }
   // Handynummern ganz unten, antippen ruft an
   const telLink = (t) => {
