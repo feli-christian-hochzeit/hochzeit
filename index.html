@@ -8,6 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#ece2dd">
 <meta name="color-scheme" content="only light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Ms+Madi&display=swap">
@@ -234,11 +235,12 @@ input::placeholder { font-size: 1.3rem; }
   transition: opacity .2s ease;
 }
 .beispiel small { font-size: 1rem; font-style: italic; opacity: .85; }
-/* Beispielnamen in der Kartenschrift, kursiv; an 320 px Handys etwa 1,1rem, sonst bis 1,4rem */
-.beispiel .b-schrift { font-size: 1.25rem; font-size: min(1.4rem, 7.6cqi); font-style: italic; letter-spacing: .02em; opacity: .9; }
-.beispiel .b-zahl { font-size: 1.3rem; font-style: italic; letter-spacing: .04em; opacity: .9; }
+/* Beispiele in der Kartenschrift, kursiv; an 320 px Handys etwa 1,1rem, sonst bis 1,4rem */
+.beispiel .b-schrift, .beispiel .b-zahl { font-size: 1.25rem; font-size: min(1.4rem, 7.6cqi); font-style: italic; letter-spacing: .02em; opacity: .9; }
 .eingabe input:focus + .beispiel { opacity: .4; }
 .eingabe input:not(:placeholder-shown) + .beispiel { opacity: 0; }
+/* iPhone macht Nummern sonst zu blauen Links */
+a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font: inherit !important; }
 input:focus-visible, textarea:focus-visible {
   outline: none;
   border-color: var(--caramel);
