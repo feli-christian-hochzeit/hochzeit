@@ -109,27 +109,27 @@ p { margin: 0; }
   z-index: 1;
   font-family: var(--f-script);
   font-weight: 400;
-  font-size: .95em;
-  line-height: .85;
+  font-size: .8em;
+  line-height: .9;
   letter-spacing: 0;
   text-transform: none;
-  margin-block: .04em 0;
+  margin-block: .08em .04em;
   padding-inline: .12em;
 }
 .anlass {
   display: flex;
   align-items: center;
-  gap: .85rem;
+  gap: 1rem;
   margin-top: 1.05rem;
   color: var(--caramel);
   font-weight: 600;
-  font-size: .86rem;
+  font-size: 1.05rem;
   line-height: 1;
   letter-spacing: .34em;
   text-transform: uppercase;
 }
 .anlass span { padding-left: .34em; }
-.anlass::before, .anlass::after { content: ""; width: 2.4rem; height: 1px; background: var(--sand); }
+.anlass::before, .anlass::after { content: ""; width: 2.8rem; height: 1px; background: var(--sand); }
 .etikett {
   margin: .95rem 0 0;
   padding: .66rem 1.2rem .58rem 1.4rem;
@@ -481,7 +481,7 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
 @media (min-width: 600px) {
   .tisch { --innen: 2rem; padding-top: 2.75rem; gap: 2rem; }
   .rahmen { padding-block: 2rem 2.1rem; }
-  .anlass { font-size: .92rem; }
+  .anlass { font-size: 1.12rem; }
   .etikett { font-size: .92rem; padding-inline: 1.6rem 1.8rem; }
 }
 </style>
