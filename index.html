@@ -355,6 +355,15 @@ textarea {
 .senden:hover { opacity: .93; }
 .senden:focus-visible { outline: 2px solid var(--caramel); outline-offset: 3px; }
 .senden:disabled { opacity: .6; cursor: progress; }
+/* Warten nach dem Absenden: Knopf füllt sich langsam wie ein Ladebalken, darunter ein Countdown */
+.senden .k-text { position: relative; z-index: 1; }
+.senden .laden { position: absolute; inset: 0 auto 0 0; width: 0; background: rgb(255 240 222 / .2); pointer-events: none; }
+.senden .laden::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #f1d3ae; }
+.senden.sendet, .senden.sendet:disabled { opacity: 1; }
+.senden.sendet .laden { width: 94%; transition: width 8s cubic-bezier(.35, .45, .55, 1); }
+.warte { margin-top: .75rem; text-align: center; font-style: italic; font-size: 1.15rem; line-height: 1.45; color: var(--caramel); }
+.warte .w-zahl { display: block; }
+.warte b { font-style: normal; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
 
 .falle { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
@@ -569,7 +578,8 @@ footer p { font-style: italic; color: var(--caramel); font-size: 1.2rem; }
           <input id="website" type="text" tabindex="-1" autocomplete="off">
         </div>
 
-        <button type="submit" class="senden" id="senden">Antwort senden</button>
+        <button type="submit" class="senden" id="senden"><span class="k-text">Antwort senden</span><span class="laden" aria-hidden="true"></span></button>
+        <p class="warte" id="warte" role="status" hidden><span id="warteText">Einen Moment bitte, eure Antwort wird gespeichert.</span><span class="w-zahl" id="warteZahl" aria-hidden="true"></span></p>
         <p class="fehler" id="err-senden" role="alert" hidden></p>
       </form>
 
@@ -806,7 +816,7 @@ const CONFIG = Object.assign({
 
   async function senden(d) {
     if (!echt) {
-      await new Promise((r) => setTimeout(r, 500));
+      await new Promise((r) => setTimeout(r, 3000));
       return { ok: true, vorschau: true };
     }
     const ctrl = new AbortController();
@@ -877,8 +887,20 @@ const CONFIG = Object.assign({
     if (!pruefe()) return;
     const d = daten();
     const knopf = $('senden');
+    const knopfText = knopf.querySelector('.k-text');
     knopf.disabled = true;
-    knopf.textContent = 'Wird gesendet …';
+    knopf.classList.add('sendet');
+    knopfText.textContent = 'Wird gesendet …';
+    // Countdown, damit alle sehen, dass sie kurz warten müssen (Speichern dauert meist 5 bis 10 Sekunden)
+    let rest = 8;
+    const zahl = () => {
+      $('warteZahl').innerHTML = rest > 0
+        ? 'Noch etwa <b>' + rest + '</b> ' + (rest === 1 ? 'Sekunde' : 'Sekunden') + '.'
+        : 'Gleich geschafft. Bitte die Seite noch nicht schließen.';
+    };
+    $('warte').hidden = false;
+    zahl();
+    const uhr = setInterval(() => { rest -= 1; zahl(); if (rest <= 0) clearInterval(uhr); }, 1000);
     try {
       const r = await senden(d);
       if (echt) {
@@ -888,8 +910,11 @@ const CONFIG = Object.assign({
     } catch (err) {
       fehler('senden', 'Das hat leider nicht geklappt. Prüft bitte eure Internetverbindung und versucht es noch einmal. Wenn es weiter hakt, sagt uns einfach direkt Bescheid.');
     } finally {
+      clearInterval(uhr);
+      $('warte').hidden = true;
+      knopf.classList.remove('sendet');
       knopf.disabled = false;
-      knopf.textContent = 'Antwort senden';
+      knopfText.textContent = 'Antwort senden';
     }
   });
 
